@@ -1,0 +1,28 @@
+/* Daivik Borewells: pastel surfaces, high-contrast ink. */
+:root {
+  --color-paper: #fafbf8;
+  --color-white: #ffffff;
+  --color-ink: #243d35;
+  --color-ink-soft: #53665e;
+  --color-mint: #e2eee4;
+  --color-mint-strong: #d1e7d7;
+  --color-blue: #e4eff4;
+  --color-peach: #f5e7df;
+  --color-lilac: #edebf3;
+  --color-accent: #2b5143;
+  --color-accent-hover: #1c3c30;
+  --color-border: #ced9d1;
+  --color-focus: #315e82;
+  --color-error: #953c32;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "DM Sans Variable", "Avenir Next", sans-serif;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 72px;
+  --space-3xl: 104px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-short: 200ms;
+  --radius-control: 4px;
+}

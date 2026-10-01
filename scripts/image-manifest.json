@@ -1,0 +1,82 @@
+[
+  {
+    "name": "hero-desktop",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-12086478-b77e-4ce5-b9f5-550717edc3fc.png",
+    "prompt": "Wide 16:9 Bangalore villa and drilling rig; sage-green truck and Indian technician to right; calm pale sky and white boundary wall to left for typography."
+  },
+  {
+    "name": "hero-mobile",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-14aecb02-badf-4685-9c08-96f93ed1337e.png",
+    "prompt": "Vertical portrait 9:16, specially composed mobile website hero: compact truck-mounted drilling rig beside premium white Bangalore villa. Whole mast, Indian technician, water discharge and red earth in lower two thirds; top third calm pale sky. Not a crop."
+  },
+  {
+    "name": "large",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-fe7c8c14-d89d-40ed-8fa8-48b3195ea9e4.png",
+    "prompt": "Landscape 4:3. Heavy Indian borewell drilling truck, whole truck and raised vertical mast fully visible on spacious open red-earth plot on outskirts of Bangalore, Indian technician safely operating, coconut palms and agricultural boundary distant."
+  },
+  {
+    "name": "compact",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-fdca9aff-4346-4564-bc94-7d130479f2c0.png",
+    "prompt": "Landscape 4:3. A real compact truck-mounted borewell drilling machine working on a narrow Bangalore residential lane between two houses. Show width and realistic clearance, Indian technician wearing helmet, faded sage-green machine, hoses."
+  },
+  {
+    "name": "robo",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-706721ed-4236-4997-b625-10d0dccd837f.png",
+    "prompt": "Landscape 4:3. Small crawler track-mounted hydraulic borewell drilling rig with upright steel drilling mast inside a restricted Bangalore residential courtyard, narrow entrance, boundary walls close on both sides. Indian technician with wired control pendant safely beside it. Real hydraulic drill not a robot humanoid."
+  },
+  {
+    "name": "survey",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-1ce961bc-4ca2-4359-81ce-094cd0375d96.png",
+    "prompt": "Landscape 4:3. Indian field technician conducting groundwater site assessment on a Bangalore residential plot using a realistic electrical resistivity meter with cables attached to ground electrodes; a tablet with no legible screen text. Natural safety workwear, red soil, coconut trees."
+  },
+  {
+    "name": "water",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-45d7a69c-ba72-4429-ac29-583d5888d9bb.png",
+    "prompt": "Landscape 4:3 close-up of clean water flowing from a steel borewell outlet into an irrigation channel at a Karnataka property. Lovely transparent water detail, restrained natural daylight, actual plumbing, a soft green garden beyond. No fantasy gushers."
+  },
+  {
+    "name": "casing",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-b6384f50-08e8-4afa-a962-f1ccf93b0506.png",
+    "prompt": "Landscape 4:3. Two Indian technicians in hard hats and muted green workwear guiding realistic steel casing pipe using proper lifting support at a borewell drilling worksite beside Bangalore house. Show pipe, vertical mast and believable equipment relationships."
+  },
+  {
+    "name": "pump",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-3cc977da-6f8b-48f3-935a-a75a335c493b.png",
+    "prompt": "Landscape 4:3. Indian technician inspecting a stainless steel submersible borewell pump laid horizontally on safe timber supports, black electrical cable and blue water pipe beside sealed borewell head at Bangalore residence. Authentic pump installation preparation."
+  },
+  {
+    "name": "villa",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-ea43fb48-98ea-4ad3-999a-c85277b7b84e.png",
+    "prompt": "Landscape 4:3 architectural photograph of a contemporary two-storey Bangalore villa, white plaster, grey stone, warm teak gate, tropical vegetation, modest closed borewell head and pump control box subtly visible beside boundary. Premium but plausible local house."
+  },
+  {
+    "name": "farm",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-dca665e4-e772-4ebe-b4dc-d3cdf69339b2.png",
+    "prompt": "Landscape 4:3. Karnataka agricultural property near Bangalore with green rows of crops, coconut palms, small borewell pump house, working irrigation pipe in foreground. Natural soft morning sunlight, realistic Indian farmland, no people necessary."
+  },
+  {
+    "name": "apartment",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-07c445e9-83b9-490d-8bb4-d96630230201.png",
+    "prompt": "Landscape 4:3 architectural photograph of realistic mid-rise Bangalore apartment development, balconies, landscaping, water tank and small borewell service infrastructure along forecourt. Neutral Indian urban architecture, no developer branding."
+  },
+  {
+    "name": "commercial",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-abc8b03d-dd4a-4760-874f-a09dca6f697a.png",
+    "prompt": "Landscape 4:3. Borewell drilling at a small commercial or industrial site near Bangalore, low-rise factory shed, grey concrete, truck-mounted sage-green drilling rig, safety-conscious Indian technician, palms in background, realistic access road."
+  },
+  {
+    "name": "hero-desktop-v2",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-7f68aeff-04e8-4abf-9c4d-1d1d1365ccd5.png",
+    "prompt": "Preserve scene; clear left 48% of vegetation for readable dark typography over pale sky and boundary wall."
+  },
+  {
+    "name": "hero-mobile-v2",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-97f28b5b-239a-478a-9983-35427a957113.png",
+    "prompt": "Recompose portrait with additional empty sky above complete rig and Bangalore home for mobile typography."
+  },
+  {
+    "name": "hero-mobile-v3",
+    "source": "/Users/dhanush/.codex/generated_images/01a0f622-91ff-7a10-b88d-f5b771024ba5/exec-b434a685-3f5a-4ecf-ba07-cb4315ad5c50.png",
+    "prompt": "Portrait 4:5 commercial photograph, upper 60 percent empty pale blue sky; complete sage-green Indian borewell rig, technician, villa and water in lower 40 percent. Realistic Bangalore setting, no text or logos."
+  }
+]
