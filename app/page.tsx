@@ -9,7 +9,7 @@ import { SiteVisitForm } from "@/components/SiteVisitForm";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { Timeline } from "@/components/Timeline";
 import { Logo } from "@/components/Logo";
-import { Reveal } from "@/components/Motion";
+import { MotionProvider, Reveal } from "@/components/Motion";
 import { areas, brand, equipment, faqs, images, serviceNames, services } from "@/data/site";
 
 function JsonLd() {
@@ -88,6 +88,7 @@ export default function Home() {
   return (
     <>
       <JsonLd />
+      <MotionProvider>
       <a className="skip-link" href="#main">Skip to content</a>
       <div id="top" />
       <Header />
@@ -194,6 +195,7 @@ export default function Home() {
         </div>
       </footer>
       <MobileContactBar />
+      </MotionProvider>
     </>
   );
 }

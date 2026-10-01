@@ -1,8 +1,4 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/dm-sans";
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
-import { MotionProvider } from "@/components/Motion";
 import { brand } from "@/data/site";
 import "./globals.css";
 
@@ -64,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
-      <body><MotionProvider>{children}</MotionProvider></body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,12 +1,12 @@
 "use client";
 
-import { motion, MotionConfig } from "framer-motion";
+import { domAnimation, LazyMotion, m, MotionConfig } from "framer-motion";
 import type { ReactNode } from "react";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
 export function MotionProvider({ children }: { children: ReactNode }) {
-  return <MotionConfig reducedMotion="never">{children}</MotionConfig>;
+  return <MotionConfig reducedMotion="never"><LazyMotion features={domAnimation} strict>{children}</LazyMotion></MotionConfig>;
 }
 
 type RevealProps = {
@@ -25,7 +25,7 @@ export function Reveal({ children, className, delay = 0, direction = "up", amoun
       : "translate3d(0, 18px, 0)";
 
   return (
-    <motion.div
+    <m.div
       className={className}
       data-motion="reveal"
       initial={{ opacity: 0, transform: hiddenTransform }}
@@ -34,7 +34,7 @@ export function Reveal({ children, className, delay = 0, direction = "up", amoun
       transition={{ duration: 0.6, delay, ease: easeOut }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 

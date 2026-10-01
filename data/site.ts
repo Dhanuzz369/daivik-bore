@@ -64,7 +64,7 @@ export const projects = [
   { type: "Commercial properties", service: "A scope that works around your site.", image: images.commercial, key: "commercial" },
 ];
 
-export const areas = ["Thalaghattapura", "Kanakapura Road", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "NICE Road corridor", "South Bangalore"];
+export const areas = ["Thalaghattapura", "Kanakapura Road", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "Kumaraswamy Layout", "Padmanabhanagar", "RR Nagar", "Kengeri", "Anjanapura", "Bannerghatta Road", "Begur", "Bommanahalli", "Electronic City", "NICE Road corridor", "South Bengaluru"];
 
 export const serviceNames = [
   "Borewell drilling",
@@ -74,6 +74,16 @@ export const serviceNames = [
   "Borewell casing installation",
   "Submersible pump installation",
   "Groundwater site assessment",
+];
+
+export const serviceDirectory = [
+  { name: "Borewell drilling", description: "Large-rig drilling for open plots, farms, layouts and sites with sufficient operating space." },
+  { name: "Compact borewell drilling", description: "A smaller drilling footprint for narrow Bangalore roads, existing homes and constrained entrances." },
+  { name: "Robo borewell drilling", description: "Track-mounted drilling considered for restricted spaces where access and turning room are limited." },
+  { name: "Groundwater site assessment", description: "A site visit to review location, access, working space and ground conditions before drilling is planned." },
+  { name: "Borewell casing installation", description: "Casing planned around drilling conditions to help protect and stabilise the borewell." },
+  { name: "Borewell deepening", description: "Assessment of an existing borewell before determining whether deepening is practical and suitable." },
+  { name: "Submersible pump installation", description: "Pump selection, fitting and testing based on borewell results and the property's intended water use." },
 ];
 
 export const faqs = [

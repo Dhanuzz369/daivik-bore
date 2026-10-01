@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Building2, Factory, House, Sprout } from "lucide-react";
 import { solutions } from "@/data/site";
 
@@ -37,7 +37,7 @@ export function SolutionSelector() {
       </div>
       <div className="solution-body" id="solution-panel" aria-live="polite" aria-atomic="true">
         <AnimatePresence mode="wait" initial={false}>
-          <motion.div className="solution-content" key={active.key} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduced ? 0 : 0.15 }}>
+          <m.div className="solution-content" key={active.key} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduced ? 0 : 0.15 }}>
             <div className="solution-photo">
               <Image src={active.image} alt={`Illustrative ${active.label.toLowerCase()} property in Bangalore`} fill sizes="(max-width: 640px) 100vw, 35vw" />
               <span>PROPERTY ILLUSTRATION</span>
@@ -50,7 +50,7 @@ export function SolutionSelector() {
               <a href={`#site-visit-${active.key}`} className="text-link">Discuss my {active.label.toLowerCase()} site <ArrowUpRight size={17} aria-hidden="true" /></a>
               <small>Machine suitability is confirmed after a site assessment.</small>
             </div>
-          </motion.div>
+          </m.div>
         </AnimatePresence>
       </div>
     </div>

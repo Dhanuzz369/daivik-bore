@@ -6,6 +6,6 @@ export function MobileContactBar() {
     <a href={brand.phoneHref}><Phone size={18} aria-hidden="true" /><span>Call</span></a>
     <a href={brand.whatsapp}><MessageCircle size={18} aria-hidden="true" /><span>WhatsApp</span></a>
     <a href={brand.emailHref}><Mail size={18} aria-hidden="true" /><span>Email</span></a>
-    <a href="#site-visit"><CalendarDays size={18} aria-hidden="true" /><span>Site visit</span></a>
+    <a href="/#site-visit"><CalendarDays size={18} aria-hidden="true" /><span>Site visit</span></a>
   </nav>;
 }
