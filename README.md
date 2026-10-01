@@ -12,10 +12,6 @@ Next.js, React, TypeScript, Tailwind CSS and Framer Motion.
 
 Business details are maintained in `data/site.ts`. Canonical URLs, robots and sitemap use https://daivikborewells.com. This configuration does not deploy the website or change DNS.
 
-## Enquiries
-
-Call and WhatsApp links use +91 94484 17318, and email links use daivikborewells@gmail.com. The site-visit form validates name, phone, location and requirement, then opens a prepared WhatsApp message. The visitor must review and send it. There is no database, automatic message delivery or server-side storage of enquiries.
-
 ## Design And Imagery
 
 The design system is documented in `design.md` and `tokens.css`.
