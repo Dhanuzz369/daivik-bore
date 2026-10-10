@@ -64,7 +64,17 @@ export const projects = [
   { type: "Commercial properties", service: "A scope that works around your site.", image: images.commercial, key: "commercial" },
 ];
 
-export const areas = ["Entire Bengaluru", "Nelamangala", "Airport Road / Devanahalli", "Doddaballapura", "Kanakapura Road", "Kengeri", "Hosur Road", "Thalaghattapura", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "RR Nagar", "Bannerghatta Road", "Electronic City", "NICE Road corridor"];
+export const bengaluruAreas = ["Entire Bengaluru", "Nelamangala", "Airport Road / Devanahalli", "Doddaballapura", "Kanakapura Road", "Kengeri", "Hosur Road", "Thalaghattapura", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "RR Nagar", "Bannerghatta Road", "Electronic City", "NICE Road corridor", "Bhartiya City / Thanisandra"];
+
+export const industrialCoverage = [
+  { name: "North Bengaluru and the airport corridor", locations: ["Devanahalli / Bagalur", "Bengaluru Aerospace Park", "Bengaluru Hardware Park / Huvinayakanahalli"] },
+  { name: "East Bengaluru", locations: ["EPIP Whitefield", "Hoskote Industrial Area"] },
+  { name: "South and southeast Bengaluru", locations: ["Electronic City", "Bommasandra", "Jigani", "Attibele"] },
+  { name: "West and northwest Bengaluru", locations: ["Peenya", "Nelamangala", "Dabaspet / Sompura"] },
+  { name: "Surrounding industrial corridors", locations: ["Doddaballapura / Apparel Park", "Bidadi", "Harohalli"] },
+];
+
+export const areas = [...new Set([...bengaluruAreas, ...industrialCoverage.flatMap(group => group.locations)])];
 
 export const serviceNames = [
   "Borewell drilling",

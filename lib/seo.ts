@@ -1,4 +1,21 @@
 import { areas, brand, serviceNames } from "@/data/site";
+import type { LocationRecord } from "@/data/locations";
+
+export function locationSchema(location: LocationRecord) {
+  const path = `/service-areas/${location.slug}`;
+  const schema = directorySchema(path, location.name, {
+    "@type": "Service", name: `Borewell services in ${location.name}`,
+    provider: { "@id": `${brand.url}/#business` },
+    areaServed: location.coverageLabels.map(name => ({ "@type": "Place", name })), serviceType: serviceNames,
+  });
+  const breadcrumb = schema["@graph"].find(entity => entity["@type"] === "BreadcrumbList");
+  if (breadcrumb && "itemListElement" in breadcrumb) breadcrumb.itemListElement = [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${brand.url}/` },
+    { "@type": "ListItem", position: 2, name: "Service areas", item: `${brand.url}/service-areas` },
+    { "@type": "ListItem", position: 3, name: location.name, item: `${brand.url}${path}` },
+  ];
+  return schema;
+}
 
 export function businessSchema() {
   return {

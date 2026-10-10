@@ -536,3 +536,71 @@ h2 em { font-weight: 400; }
   .planning-section h2 { font-size: 32px; }
   .form-note, .privacy-note, .image-note, .solution-copy small { font-size: 12px; }
 }
+
+/* Location template: shared homepage tokens, isolated layout rules. */
+.location-page { background: var(--color-paper); }
+.location-page main { min-width: 0; }
+.location-page .location-hero { position: relative; background: var(--color-blue); }
+.location-page .location-hero-image { object-fit: cover; object-position: 70% center; }
+.location-page .location-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #e5f0f6 0%, rgba(229,240,246,.96) 32%, rgba(229,240,246,.76) 52%, rgba(229,240,246,0) 78%); }
+.location-page .location-hero-inner { position: relative; padding-block: 30px 52px; min-height: 650px; }
+.location-page .location-breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; margin-bottom: 44px; }
+.location-page .location-breadcrumbs a { text-decoration: underline; text-underline-offset: 4px; }
+.location-page .location-hero h1 { font-family: var(--font-display); font-size: 64px; font-weight: 400; line-height: 1.05; max-width: 690px; margin-top: 18px; overflow-wrap: anywhere; }
+.location-page .location-hero h1 em { display: block; font-weight: 400; }
+.location-page .location-hero-description { max-width: 460px; margin-top: 22px; }
+.location-page .location-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 26px 12px; }
+.location-page .location-assurance { background: var(--color-peach); }
+.location-page .location-assurance > div { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 19px; font-size: 12px; }
+.location-page .location-assurance a { display: inline-flex; align-items: center; gap: 8px; }
+.location-page .location-columns { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; }
+.location-page .eyebrow + h2 { margin-top: 18px; }
+.location-page .location-columns p { margin-top: 20px; color: var(--color-ink-soft); max-width: 65ch; }
+.location-page .location-local-sections article { border-top: 1px solid var(--color-border); padding-block: 28px; }
+.location-page .location-local-sections h3 { font-family: var(--font-display); font-size: 30px; font-weight: 400; line-height: 1.2; }
+.location-page .location-services { background: var(--color-blue); }
+.location-page .location-section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 44px; }
+.location-page .location-section-heading p:not(.eyebrow) { color: var(--color-ink-soft); max-width: 45ch; }
+.location-page .location-section-heading .text-link { margin-top: 18px; }
+.location-page .location-service-list article { display: grid; grid-template-columns: 42px 1fr 1fr; gap: 30px; border-top: 1px solid var(--color-border); padding-block: 27px; align-items: start; }
+.location-page .location-service-number { font-size: 12px; padding-top: 7px; }
+.location-page .location-service-list h3 { font-family: var(--font-display); font-size: 29px; line-height: 1.15; font-weight: 400; }
+.location-page .location-service-list p { font-size: 14px; color: var(--color-ink-soft); }
+.location-page .location-preparation ul { list-style: none; padding: 0; margin: 0; }
+.location-page .location-preparation li { display: flex; gap: 18px; padding-block: 23px; border-top: 1px solid var(--color-border); }
+.location-page .location-faq { border-top: 1px solid var(--color-border); }
+.location-page .location-gallery-link { background: var(--color-lilac); padding-block: 58px; }
+.location-page .location-gallery-link > div { display: flex; gap: 40px; justify-content: space-between; align-items: end; }
+.location-page .location-gallery-link h2 { font-size: 46px; }
+.location-page .location-gallery-link p:not(.eyebrow) { margin-top: 18px; max-width: 60ch; color: var(--color-ink-soft); }
+.location-page .location-gallery-link a { flex-shrink: 0; }
+.location-page .location-contact { background: var(--color-mint); }
+.location-page .location-contact-links { display: flex; flex-direction: column; align-items: start; justify-content: center; gap: 12px; min-width: 0; }
+.location-page .location-phone { display: flex; gap: 16px; align-items: center; font-size: 40px; line-height: 1.2; }
+.location-page .location-contact-links a, .location-page .footer-main a { overflow-wrap: anywhere; max-width: 100%; }
+.location-page .footer-main { grid-template-columns: 1.4fr 1fr 1.2fr; }
+@media (max-width: 900px) {
+  .location-page .location-columns, .location-page .location-section-heading { gap: 36px; }
+  .location-page .location-hero h1 { font-size: 54px; max-width: 580px; }
+}
+@media (max-width: 640px) {
+  .location-page .location-hero-inner { min-height: 620px; padding-block: 18px 150px; }
+  .location-page .location-hero-image { object-position: 68% bottom; }
+  .location-page .location-hero-shade { background: linear-gradient(180deg, #e5f0f6 0%, rgba(229,240,246,.96) 56%, rgba(229,240,246,.25) 78%, transparent 100%); }
+  .location-page .location-breadcrumbs { margin-bottom: 18px; }
+  .location-page .location-hero h1 { font-size: 36px; margin-top: 14px; }
+  .location-page .location-hero-description { font-size: 14px; margin-top: 14px; }
+  .location-page .location-actions { gap: 8px; margin-top: 18px; }
+  .location-page .location-actions .button { padding-inline: 14px; }
+  .location-page .location-assurance > div { gap: 9px; font-size: 12px; }
+  .location-page .location-columns, .location-page .location-section-heading { grid-template-columns: 1fr; gap: 32px; }
+  .location-page h2 { font-size: 38px; }
+  .location-page .location-service-list article { grid-template-columns: 24px 1fr; gap: 12px; padding-block: 24px; }
+  .location-page .location-service-list h3 { font-size: 26px; }
+  .location-page .location-service-list p { grid-column: 2; }
+  .location-page .location-gallery-link > div { display: block; }
+  .location-page .location-gallery-link h2 { font-size: 38px; }
+  .location-page .location-gallery-link a { margin-top: 24px; }
+  .location-page .location-phone { font-size: 32px; }
+  .location-page .footer-main { grid-template-columns: 1fr; }
+}

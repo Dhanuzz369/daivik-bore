@@ -17,6 +17,17 @@ Updated: 10 October 2026. Owner-confirmed means supplied by the owner in this ch
 
 The current confirmation resolves earlier audit concerns about advertised services, geography and free visits. It does not supply a missing street address, opening hours, numerical experience claim or genuine project record. Do not ask the owner to reconfirm the facts above.
 
+## Newly Named Industrial Coverage
+
+Owner explicitly supplied north/airport, east, south/southeast, west/northwest and surrounding industrial coverage on 10 October 2026. Named places include Aerospace Park/SEZ, Hardware Park, IT Park/SEZ, EPIP Whitefield, Electronic City phases, Bommasandra, Jigani/link road, Attibele, Peenya, Nelamangala, Dabaspet/Sompura, Doddaballapura/Apparel Park, Hoskote, Bidadi and Harohalli. See `DAIVIK_KEYWORD_TO_PAGE_MAP.md` for grouping. This confirms coverage, not tenant relationships, completed industrial projects or KIADB affiliation.
+
+- [ ] Resolve exact Bengaluru IT Park/IT SEZ identity; supplied Google link shares an Aerospace Park identifier and is not reliable identity evidence.
+- [ ] Confirm exact Electronic City phases and intended BMS-Jigani link-road name before precise phase/estate labels.
+- [ ] Distinguish KIADB estates from other industrial locations, notably Nelamangala; do not describe every industrial corridor as KIADB.
+- [ ] Supply any genuine industrial project scope/access records; no permit or groundwater outcome guarantees inferred.
+
+Bhartiya City coverage falls under the all-Bengaluru confirmation as a geographic inference; no local projects or affiliation established. Prefer a north-Bengaluru hub section pending copy review.
+
 ## Missing Details That Affect Implementation
 
 - [x] Preferred website host: owner approved `www` with the design; implementation aligns URL signals.
@@ -31,6 +42,8 @@ The current confirmation resolves earlier audit concerns about advertised servic
 - [ ] Real GBP/public Maps listing URL and approved social profiles; existing map is only a neighbourhood search. Do not create profiles or change settings without authorization.
 
 ## First-Party Evidence
+
+Owner selected Airport Road as the first dedicated-page priority on 11 October 2026. `devanahalli-airport-road` remains pending: priority and coverage do not provide distinct local service/project evidence. Before publication, supply a genuine local scope/access arrangement, permission-backed project record or other original useful local information; approval of layout alone does not establish these facts.
 
 - [ ] Supplied hero image ownership/provenance, permission and actual location; supplying an image does not prove that it depicts Daivik's completed work.
 - [ ] Genuine project photos/videos with date, service, locality, scope, factual result and customer permission. Avoid exposing customer addresses or contact details.

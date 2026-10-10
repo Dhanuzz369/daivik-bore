@@ -1,7 +1,23 @@
 # Daivik Borewells SEO Baseline
 
 Audit date: 10 October 2026 (Asia/Kolkata). Source revision: `f155b2b`.
-Status: Stage A completed; customer-facing implementation has not started.
+Status: Historical pre-change baseline below. Implementation completed at `752fe25`; refreshed production observations follow. Historical findings are not a statement of current defects.
+
+## Refreshed Production Baseline
+
+10 October 2026, after the previous approved implementation. Fresh evidence: `docs/DAIVIK_SEO_REFRESH_EVIDENCE.json` and `docs/DAIVIK_LIGHTHOUSE_REFRESH.json`. No website changes made for this refresh.
+
+- All three discovered HTML routes return 200. Canonicals, robots sitemap declaration and sitemap page URLs consistently use `https://www.daivikborewells.com`. The root canonical without a trailing slash denotes the same root URL.
+- Sitemap parses as XML, contains exactly the three existing public page URLs, and has no synthetic lastmod, priority or changefreq. No private or hypothetical routes.
+- All three pages have unique titles/descriptions, index/follow directives, one H1, parsed JSON-LD and no unresolved same-page fragment links in the crawl.
+- Organization/WebSite/WebPage appear on each route; directories have BreadcrumbList. Homepage has Service and visible-question FAQPage; directory ItemList contains verified services. No invented physical address or review/rating schema.
+- Current initial-HTML main word counts including UI: homepage 1,015; service hub 377; coverage hub 200. Counts are observations, not quality thresholds.
+- Live mobile Lighthouse 13.0.1, 10:51 UTC: performance 99, accessibility/best practices/SEO 100; LCP 2.168s, FCP 1.076s, TBT 32ms, CLS 0. Simulated mobile network and 4x CPU slowdown. A single lab run does not establish field INP or guarantee every visit under three seconds.
+- Earlier browser regression, build/typecheck and desktop/mobile visual checks remain documented in `DAIVIK_SEO_IMPLEMENTATION_REPORT.md`; they were not rerun as part of this documentation-only refresh. Raw crawl does not prove every external link works or Google indexing.
+
+Resolved historical findings: T1, C1, C2, L1, S1, T2, T3, T4, A1, A2 and touch/readability refinements. Remaining priorities: authentic project evidence, operational service detail, exact public business model/hours and authorized search/conversion measurement. New brief adds Bhartiya City and named industrial corridors; plan review precedes customer-facing additions.
+
+Specialist coverage: previous full audit covered technical, local, content, schema, sitemap, performance, visual and GEO/AEO checks. This refresh rechecks production crawl/schema/metadata/sitemap and mobile performance and extends locality research; it is not a claim that every specialist or authenticated integration ran again. DataForSEO, Firecrawl, GSC, GA4, Maps geo-grid and AI-citation measurement remain unavailable in this session. No fabricated aggregate audit score.
 
 ## Problem Definition
 
