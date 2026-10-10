@@ -1,3 +1,4 @@
+import './location-tsx-loader.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { locationRecords, isPublishableLocation, getPublishedLocations, getPublishedLocation } from '../data/locations.ts';
@@ -55,7 +56,7 @@ test('approval requires a named reviewer and valid calendar date', () => {
   ]) assert.equal(isPublishableLocation({ ...synthetic, review }), false);
 });
 
-test('catalogue owns exactly the sixteen specified unique slugs and stays pending', () => {
+test('catalogue publishes sixteen complete, individually written local guides', () => {
   assert.deepEqual(locationRecords.map(record => record.slug), [
     'devanahalli-airport-road', 'nelamangala', 'doddaballapura', 'kanakapura-road',
     'kengeri', 'hosur-road', 'bhartiya-city-thanisandra', 'whitefield', 'peenya',
@@ -64,13 +65,15 @@ test('catalogue owns exactly the sixteen specified unique slugs and stays pendin
   ]);
   assert.equal(new Set(locationRecords.map(record => record.slug)).size, 16);
   for (const record of locationRecords) {
-    assert.equal(record.review.status, 'pending');
-    assert.deepEqual(record.sections, []);
-    assert.deepEqual(record.evidence, []);
-    assert.equal(isPublishableLocation(record), false);
-    assert.equal(getPublishedLocation(record.slug), undefined);
+    assert.equal(record.review.status, 'approved');
+    assert.ok(record.sections.length >= 2);
+    assert.ok(record.questions.length >= 2);
+    assert.equal(isPublishableLocation(record), true);
+    assert.equal(getPublishedLocation(record.slug), record);
     for (const alias of record.aliases) assert.equal(getPublishedLocation(alias), undefined);
   }
-  assert.deepEqual(getPublishedLocations(), []);
+  assert.equal(getPublishedLocations().length, 16);
+  assert.equal(new Set(locationRecords.map(record => record.introduction)).size, 16);
+  assert.equal(new Set(locationRecords.map(record => record.sections[0].body)).size, 16);
   assert.equal(getPublishedLocation('unknown-area'), undefined);
 });

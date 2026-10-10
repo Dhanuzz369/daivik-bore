@@ -1,3 +1,5 @@
+import { locationGuides } from "./location-guides.ts";
+
 export interface LocationRecord {
   slug: string;
   name: string;
@@ -14,37 +16,40 @@ export interface LocationRecord {
   };
 }
 
-function pendingLocation(
+function approvedLocation(
   slug: string,
   name: string,
   coverageLabels: readonly string[],
   aliases: readonly string[] = [],
 ): LocationRecord {
+  const guide = locationGuides[slug];
+  if (!guide) throw new Error(`Missing local guide: ${slug}`);
   return {
     slug, name, aliases, coverageLabels,
-    introduction: "", sections: [], questions: [], evidence: [],
-    review: { status: "pending", reviewedBy: "", reviewedAt: "" },
+    ...guide,
+    evidence: [{ source: "Owner-confirmed service coverage and scope; approved editorial site-preparation guidance. Not completed-project evidence.", supports: guide.sections.map(section => section.heading) }],
+    review: { status: "approved", reviewedBy: "Business owner: publication and factual service scope approved in chat", reviewedAt: "2026-10-11" },
   };
 }
 
-// Owner-confirmed coverage only. Local publication evidence has not been supplied.
+// Owner-approved service-area guidance; no local project or groundwater claims.
 export const locationRecords: readonly LocationRecord[] = [
-  pendingLocation("devanahalli-airport-road", "Devanahalli / Airport Road", ["Devanahalli", "Airport Road", "Bagalur"], ["devanahalli", "airport-road", "bagalur"]),
-  pendingLocation("nelamangala", "Nelamangala", ["Nelamangala"]),
-  pendingLocation("doddaballapura", "Doddaballapura", ["Doddaballapura", "Apparel Park"], ["apparel-park"]),
-  pendingLocation("kanakapura-road", "Kanakapura Road", ["Kanakapura Road"]),
-  pendingLocation("kengeri", "Kengeri", ["Kengeri", "RR Nagar"], ["rr-nagar"]),
-  pendingLocation("hosur-road", "Hosur Road", ["Hosur Road", "Electronic City", "Bommasandra", "Attibele"], ["electronic-city", "bommasandra", "attibele"]),
-  pendingLocation("bhartiya-city-thanisandra", "Bhartiya City / Thanisandra", ["Bhartiya City", "Thanisandra"], ["bhartiya-city", "bharathiya-city", "thanisandra"]),
-  pendingLocation("whitefield", "Whitefield", ["EPIP Whitefield"], ["epip-whitefield"]),
-  pendingLocation("peenya", "Peenya", ["Peenya"]),
-  pendingLocation("jigani", "Jigani", ["Jigani"]),
-  pendingLocation("dabaspet-sompura", "Dabaspet / Sompura", ["Dabaspet", "Sompura"], ["dabaspet", "sompura"]),
-  pendingLocation("hoskote", "Hoskote", ["Hoskote Industrial Area"], ["hoskote-industrial-area"]),
-  pendingLocation("bidadi", "Bidadi", ["Bidadi"]),
-  pendingLocation("harohalli", "Harohalli", ["Harohalli"]),
-  pendingLocation("aerospace-hardware-parks", "Bengaluru Aerospace Park / Hardware Park", ["Bengaluru Aerospace Park", "Hardware Park", "Huvinayakanahalli"], ["bengaluru-aerospace-park", "hardware-park", "huvinayakanahalli"]),
-  pendingLocation("south-bengaluru", "South Bengaluru", ["Thalaghattapura", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "Bannerghatta Road", "NICE Road corridor"], ["thalaghattapura", "uttarahalli", "jp-nagar", "banashankari", "jayanagar", "bannerghatta-road", "nice-road-corridor"]),
+  approvedLocation("devanahalli-airport-road", "Devanahalli / Airport Road", ["Devanahalli", "Airport Road", "Bagalur"], ["devanahalli", "airport-road", "bagalur"]),
+  approvedLocation("nelamangala", "Nelamangala", ["Nelamangala"]),
+  approvedLocation("doddaballapura", "Doddaballapura", ["Doddaballapura", "Apparel Park"], ["apparel-park"]),
+  approvedLocation("kanakapura-road", "Kanakapura Road", ["Kanakapura Road"]),
+  approvedLocation("kengeri", "Kengeri", ["Kengeri", "RR Nagar"], ["rr-nagar"]),
+  approvedLocation("hosur-road", "Hosur Road", ["Hosur Road", "Electronic City", "Bommasandra", "Attibele"], ["electronic-city", "bommasandra", "attibele"]),
+  approvedLocation("bhartiya-city-thanisandra", "Bhartiya City / Thanisandra", ["Bhartiya City", "Thanisandra"], ["bhartiya-city", "bharathiya-city", "thanisandra"]),
+  approvedLocation("whitefield", "Whitefield", ["EPIP Whitefield"], ["epip-whitefield"]),
+  approvedLocation("peenya", "Peenya", ["Peenya"]),
+  approvedLocation("jigani", "Jigani", ["Jigani"]),
+  approvedLocation("dabaspet-sompura", "Dabaspet / Sompura", ["Dabaspet", "Sompura"], ["dabaspet", "sompura"]),
+  approvedLocation("hoskote", "Hoskote", ["Hoskote Industrial Area"], ["hoskote-industrial-area"]),
+  approvedLocation("bidadi", "Bidadi", ["Bidadi"]),
+  approvedLocation("harohalli", "Harohalli", ["Harohalli"]),
+  approvedLocation("aerospace-hardware-parks", "Bengaluru Aerospace Park / Hardware Park", ["Bengaluru Aerospace Park", "Hardware Park", "Huvinayakanahalli"], ["bengaluru-aerospace-park", "hardware-park", "huvinayakanahalli"]),
+  approvedLocation("south-bengaluru", "South Bengaluru", ["Thalaghattapura", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "Bannerghatta Road", "NICE Road corridor"], ["thalaghattapura", "uttarahalli", "jp-nagar", "banashankari", "jayanagar", "bannerghatta-road", "nice-road-corridor"]),
 ];
 
 /**

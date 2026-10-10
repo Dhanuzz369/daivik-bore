@@ -3,6 +3,7 @@ import { registerHooks } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { createElement } from 'react';
 import { locationFixture } from './location-page.fixture.mjs';
 import * as catalogue from '../data/locations.ts';
 import { brand, serviceNames } from '../data/site.ts';
@@ -29,12 +30,12 @@ test('publication gate agrees across params, route, metadata, hub and sitemap', 
   const { default: sitemap } = await import('../app/sitemap.ts');
   const { default: Hub } = await import('../app/service-areas/page.tsx');
   assert.equal(catalogue.locationRecords.length, 16);
-  assert.equal(catalogue.getPublishedLocations().length, 0);
+  assert.equal(catalogue.getPublishedLocations().length, 16);
   assert.equal(route.dynamicParams, false);
   assert.deepEqual(route.generateStaticParams(), []);
   assert.equal(sitemap().length, 3);
   assert.doesNotMatch(renderToStaticMarkup(Hub()), /href="\/service-areas\//);
-  for (const slug of [...catalogue.locationRecords.map(record => record.slug), 'unknown', fixture.slug]) {
+  for (const slug of ['unknown', fixture.slug]) {
     await assert.rejects(route.default(props(slug)), /;404/);
     await assert.rejects(route.generateMetadata(props(slug)), /;404/);
   }
@@ -77,5 +78,24 @@ test('real public selector rejects an approved record alias', () => {
     assert.equal(catalogue.getPublishedLocation(fixture.aliases[0]), undefined);
     assert.equal(catalogue.getPublishedLocation('unknown'), undefined);
   } finally { catalogue.locationRecords.splice(catalogue.locationRecords.indexOf(fixture), 1); }
-  assert.equal(catalogue.getPublishedLocations().length, 0);
+  assert.equal(catalogue.getPublishedLocations().length, 16);
+});
+
+test('all real locality routes, canonical metadata and sitemap entries agree', async () => {
+  published = catalogue.getPublishedLocations();
+  try {
+    const route = await import('../app/service-areas/[slug]/page.tsx');
+    const { default: sitemap } = await import('../app/sitemap.ts');
+    assert.equal(route.generateStaticParams().length, 16);
+    assert.equal(sitemap().length, 19);
+    for (const record of published) {
+      const url = `${brand.url}/service-areas/${record.slug}`;
+      assert.ok(sitemap().some(entry => entry.url === url));
+      assert.equal((await route.generateMetadata(props(record.slug))).alternates.canonical, url);
+      const html = renderToStaticMarkup(await route.default(props(record.slug)));
+      assert.ok(html.includes(renderToStaticMarkup(createElement('p', null, record.introduction))));
+      assert.ok(html.includes('tel:+919448417318'));
+      assert.ok(html.includes('href="/#projects"'));
+    }
+  } finally { published = []; }
 });
