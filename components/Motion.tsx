@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
 export function MotionProvider({ children }: { children: ReactNode }) {
-  return <MotionConfig reducedMotion="never"><LazyMotion features={domAnimation} strict>{children}</LazyMotion></MotionConfig>;
+  return <MotionConfig reducedMotion="user"><LazyMotion features={domAnimation} strict>{children}</LazyMotion></MotionConfig>;
 }
 
 type RevealProps = {
@@ -28,7 +28,7 @@ export function Reveal({ children, className, delay = 0, direction = "up", amoun
     <m.div
       className={className}
       data-motion="reveal"
-      initial={{ opacity: 0, transform: hiddenTransform }}
+      initial={{ opacity: 1, transform: hiddenTransform }}
       whileInView={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
       viewport={{ once: true, amount }}
       transition={{ duration: 0.6, delay, ease: easeOut }}

@@ -508,7 +508,7 @@ h2 em { font-weight: 400; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-motion] { transform: none !important; }
+  [data-motion] { transform: none !important; opacity: 1 !important; }
   .timeline-track > div { transform: none !important; }
   *,
   *::before,
@@ -518,4 +518,21 @@ h2 em { font-weight: 400; }
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; font-size: 13px; }
+.breadcrumbs a { text-decoration: underline; text-underline-offset: 4px; }
+.planning-section { padding-block: 48px; border-top: 1px solid var(--color-border); }
+.planning-section h2 { font-size: 36px; margin-bottom: 28px; }
+.planning-section h3 { font-size: 20px; margin-bottom: 12px; }
+.planning-section p { max-width: 75ch; margin-bottom: 20px; }
+.planning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 28px; }
+.form-submit:disabled { cursor: default; opacity: .65; }
+.form-fields .form-error { display: block; font-size: 13px; }
+.form-fields [aria-invalid="true"] { border-color: #a32d2d; }
+.menu-toggle, .gallery-controls .icon-button { min-width: 48px; min-height: 48px; }
+@media (max-width: 640px) {
+  .planning-grid { grid-template-columns: 1fr; gap: 20px; }
+  .planning-section h2 { font-size: 32px; }
+  .form-note, .privacy-note, .image-note, .solution-copy small { font-size: 12px; }
 }

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { brand } from "@/data/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://daivikborewells.com/sitemap.xml",
-    host: "https://daivikborewells.com",
+    sitemap: `${brand.url}/sitemap.xml`,
+    host: brand.url,
   };
 }

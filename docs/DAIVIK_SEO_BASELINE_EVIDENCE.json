@@ -1,0 +1,1053 @@
+{
+  "analyzed_at": "2026-10-10T10:17:48.876439+00:00",
+  "robots": "User-Agent: *\nAllow: /\n\nHost: https://daivikborewells.com\nSitemap: https://daivikborewells.com/sitemap.xml\n",
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://daivikborewells.com</loc>\n<lastmod>2026-10-01T12:28:37.084Z</lastmod>\n<changefreq>weekly</changefreq>\n<priority>1</priority>\n</url>\n<url>\n<loc>https://daivikborewells.com/borewell-services</loc>\n<lastmod>2026-10-01T12:28:37.084Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.85</priority>\n</url>\n<url>\n<loc>https://daivikborewells.com/service-areas</loc>\n<lastmod>2026-10-01T12:28:37.084Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.8</priority>\n</url>\n</urlset>\n",
+  "sitemap_locations": [
+    "https://daivikborewells.com",
+    "https://daivikborewells.com/borewell-services",
+    "https://daivikborewells.com/service-areas"
+  ],
+  "pages": [
+    {
+      "requested": "https://www.daivikborewells.com/",
+      "url": "https://www.daivikborewells.com/",
+      "status": 200,
+      "redirect_chain": [],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Age": "699155",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sat, 10 Oct 2026 10:17:45 GMT",
+        "Etag": "W/\"bf3cbda555677c71b6164352b014a4cb\"",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Matched-Path": "/",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::fjffs-1791627465062-5a5d37623630",
+        "Transfer-Encoding": "chunked"
+      },
+      "html_bytes_utf8": 127791,
+      "title": "Borewell Drilling Bangalore | Daivik Borewells",
+      "canonical": "https://daivikborewells.com",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Borewell drilling in Bangalore for homes, apartments, farms and commercial sites. Compact, robo and large-rig drilling, casing, deepening and pump installation.",
+        "application-name": "Daivik Borewells",
+        "creator": "Daivik Borewells",
+        "publisher": "Daivik Borewells",
+        "robots": "index, follow",
+        "googlebot": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+        "category": "Borewell drilling services",
+        "geo.region": "IN-KA",
+        "geo.placename": "Bengaluru",
+        "og:title": "Borewell Drilling in Bangalore | Daivik Borewells",
+        "og:description": "Complete borewell drilling, casing, deepening and pump installation for Bangalore properties, including narrow-road and restricted-access sites.",
+        "og:url": "https://daivikborewells.com",
+        "og:site_name": "Daivik Borewells",
+        "og:locale": "en_IN",
+        "og:image": "https://daivikborewells.com/images/hero-user.webp",
+        "og:image:width": "1448",
+        "og:image:height": "1086",
+        "og:image:alt": "Daivik Borewells: borewell solutions in Bangalore",
+        "og:type": "website",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Borewell Drilling in Bangalore | Daivik Borewells",
+        "twitter:description": "Complete borewell solutions for homes, apartments, farms and commercial properties across Bangalore.",
+        "twitter:image": "https://daivikborewells.com/images/hero-user.webp"
+      },
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Daivik Borewells ."
+        },
+        {
+          "level": "h2",
+          "text": "What are you planning for?"
+        },
+        {
+          "level": "h3",
+          "text": "Your home. Your water source."
+        },
+        {
+          "level": "h2",
+          "text": "One site. Three ways to drill."
+        },
+        {
+          "level": "h3",
+          "text": "Large rigs"
+        },
+        {
+          "level": "h3",
+          "text": "Compact drilling"
+        },
+        {
+          "level": "h3",
+          "text": "Robo drilling"
+        },
+        {
+          "level": "h2",
+          "text": "From the first survey to the first flow."
+        },
+        {
+          "level": "h3",
+          "text": "Find the right spot"
+        },
+        {
+          "level": "h3",
+          "text": "Drill with a plan"
+        },
+        {
+          "level": "h3",
+          "text": "Protect the borewell"
+        },
+        {
+          "level": "h3",
+          "text": "Bring water home"
+        },
+        {
+          "level": "h2",
+          "text": "A clear path to water."
+        },
+        {
+          "level": "h3",
+          "text": "Visit & assess"
+        },
+        {
+          "level": "h3",
+          "text": "Plan & select"
+        },
+        {
+          "level": "h3",
+          "text": "Drill & case"
+        },
+        {
+          "level": "h3",
+          "text": "Install & test"
+        },
+        {
+          "level": "h2",
+          "text": "Grounded in care. Built for your site."
+        },
+        {
+          "level": "h3",
+          "text": "Access comes first"
+        },
+        {
+          "level": "h3",
+          "text": "A clear scope"
+        },
+        {
+          "level": "h3",
+          "text": "From drilling to handover"
+        },
+        {
+          "level": "h2",
+          "text": "Different sites. The same care."
+        },
+        {
+          "level": "h3",
+          "text": "Homes & villas"
+        },
+        {
+          "level": "h3",
+          "text": "Apartments & layouts"
+        },
+        {
+          "level": "h3",
+          "text": "Farms & agriculture"
+        },
+        {
+          "level": "h3",
+          "text": "Commercial properties"
+        },
+        {
+          "level": "h2",
+          "text": "Bangalore. And your corner of it."
+        },
+        {
+          "level": "h2",
+          "text": "Good questions. Straight answers."
+        },
+        {
+          "level": "h2",
+          "text": "Your next step? A conversation."
+        }
+      ],
+      "main_word_count_including_ui": 879,
+      "links": [
+        "https://wa.me/919448417318?text=Hi%2C%20I%20need%20a%20borewell%20solution%20for%20my%20property%20in%20Bangalore.%20I%20would%20like%20to%20discuss%20my%20site.",
+        "https://www.daivikborewells.com/#equipment",
+        "https://www.daivikborewells.com/#faq",
+        "https://www.daivikborewells.com/#main",
+        "https://www.daivikborewells.com/#process",
+        "https://www.daivikborewells.com/#services",
+        "https://www.daivikborewells.com/#site-visit",
+        "https://www.daivikborewells.com/#site-visit-home",
+        "https://www.daivikborewells.com/#solution-apartment",
+        "https://www.daivikborewells.com/#solution-commercial",
+        "https://www.daivikborewells.com/#solution-farm",
+        "https://www.daivikborewells.com/#solution-home",
+        "https://www.daivikborewells.com/#solutions",
+        "https://www.daivikborewells.com/#top",
+        "https://www.daivikborewells.com/sitemap.xml",
+        "https://www.google.com/maps/search/?api=1&query=Thalaghattapura+Bangalore",
+        "mailto:daivikborewells@gmail.com",
+        "tel:+919448417318"
+      ],
+      "unresolved_fragments": [],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "LocalBusiness",
+                "ProfessionalService"
+              ],
+              "@id": "https://daivikborewells.com/#business",
+              "name": "Daivik Borewells",
+              "alternateName": "Daivik Borewells Bangalore",
+              "url": "https://daivikborewells.com",
+              "logo": "https://daivikborewells.com/icon.svg",
+              "image": "https://daivikborewells.com/images/hero-user.webp",
+              "email": "daivikborewells@gmail.com",
+              "telephone": "+91 94484 17318",
+              "description": "Borewell drilling contractor serving homes, apartments, farms and commercial properties across Bangalore with large-rig, compact and robo drilling, casing, deepening and pump installation.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "addressCountry": "IN"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Thalaghattapura, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Kanakapura Road, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Uttarahalli, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "JP Nagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Banashankari, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Jayanagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Kumaraswamy Layout, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Padmanabhanagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "RR Nagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Kengeri, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Anjanapura, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Bannerghatta Road, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Begur, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Bommanahalli, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Electronic City, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "NICE Road corridor, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "South Bengaluru, Bengaluru, Karnataka"
+                }
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91 94484 17318",
+                "email": "daivikborewells@gmail.com",
+                "contactType": "customer service",
+                "areaServed": "IN-KA",
+                "availableLanguage": "English"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Borewell services in Bangalore",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Borewell drilling"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Compact borewell drilling"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Robo borewell drilling"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Borewell deepening"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Borewell casing installation"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Submersible pump installation"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Groundwater site assessment"
+                    }
+                  }
+                ]
+              },
+              "knowsAbout": [
+                "Borewell drilling",
+                "Compact borewell drilling",
+                "Robo borewell drilling",
+                "Borewell deepening",
+                "Borewell casing installation",
+                "Submersible pump installation",
+                "Groundwater site assessment"
+              ],
+              "slogan": "Water, where you need it."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://daivikborewells.com/#website",
+              "url": "https://daivikborewells.com",
+              "name": "Daivik Borewells",
+              "alternateName": "Daivik Borewells Bangalore",
+              "inLanguage": "en-IN",
+              "publisher": {
+                "@id": "https://daivikborewells.com/#business"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://daivikborewells.com/#webpage",
+              "url": "https://daivikborewells.com",
+              "name": "Borewell Drilling in Bangalore | Daivik Borewells",
+              "description": "Borewell drilling, casing, deepening and pump installation for Bangalore homes, apartments, farms and commercial properties.",
+              "isPartOf": {
+                "@id": "https://daivikborewells.com/#website"
+              },
+              "about": {
+                "@id": "https://daivikborewells.com/#business"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://daivikborewells.com/images/hero-user.webp",
+                "width": 1448,
+                "height": 1086
+              },
+              "inLanguage": "en-IN"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://daivikborewells.com/#borewell-service",
+              "name": "Borewell drilling services in Bangalore",
+              "description": "Site assessment, large-rig, compact and robo borewell drilling, casing, borewell deepening, pump installation and testing.",
+              "provider": {
+                "@id": "https://daivikborewells.com/#business"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Thalaghattapura, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Kanakapura Road, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Uttarahalli, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "JP Nagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Banashankari, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Jayanagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Kumaraswamy Layout, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Padmanabhanagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "RR Nagar, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Kengeri, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Anjanapura, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Bannerghatta Road, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Begur, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Bommanahalli, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Electronic City, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "NICE Road corridor, Bengaluru, Karnataka"
+                },
+                {
+                  "@type": "Place",
+                  "name": "South Bengaluru, Bengaluru, Karnataka"
+                }
+              ],
+              "serviceType": [
+                "Borewell drilling",
+                "Compact borewell drilling",
+                "Robo borewell drilling",
+                "Borewell deepening",
+                "Borewell casing installation",
+                "Submersible pump installation",
+                "Groundwater site assessment"
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://daivikborewells.com/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Can you reach a narrow road or an existing home?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Compact and track-mounted robo drilling machines may suit restricted sites. We check entrance width, turning space, overhead clearance and working room before confirming the right machine."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much does a borewell cost?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The price depends on access, drilling depth, ground conditions, casing and pump requirements. Share your location and site details for an assessment and a scope-based quote."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can you guarantee that we will find water?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. A groundwater assessment helps guide the drilling location, but water availability and yield depend on local geology. No survey or drilling method can guarantee water."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you handle casing and pump installation too?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We can coordinate assessment, machine selection, drilling, casing, pump installation and testing. Pump selection follows the drilling results and your usage requirements."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can an existing borewell be deepened?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We first assess the existing borewell, its condition and site access. Deepening is considered only where suitable; the recommendation and scope depend on that assessment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where in Bangalore do you work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We serve Thalaghattapura, Kanakapura Road, Uttarahalli, JP Nagar, Banashankari, Jayanagar and nearby South Bangalore areas. Share your location to confirm access and scheduling."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I book a borewell site visit?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Call or WhatsApp Daivik Borewells on +91 94484 17318, email daivikborewells@gmail.com, or submit the site-visit form. Share your Bangalore location and property type so we can discuss access and the suitable drilling machine."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "alt": "Borewell drilling rig operating on a Bangalore site",
+          "width": null,
+          "height": null,
+          "sizes": "100vw",
+          "loading": null
+        },
+        {
+          "alt": "Illustrative home property in Bangalore",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 100vw, 35vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustration of large rigs for open sites",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 82vw, (max-width: 900px) 46vw, 31vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustration of compact drilling for narrow roads",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 82vw, (max-width: 900px) 46vw, 31vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustration of robo drilling for restricted spaces",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 82vw, (max-width: 900px) 46vw, 31vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustration of an Indian technician assessing a borewell site with survey equipment",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 760px) 100vw, 40vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "",
+          "width": null,
+          "height": null,
+          "sizes": "96px",
+          "loading": "lazy"
+        },
+        {
+          "alt": "",
+          "width": null,
+          "height": null,
+          "sizes": "96px",
+          "loading": "lazy"
+        },
+        {
+          "alt": "",
+          "width": null,
+          "height": null,
+          "sizes": "96px",
+          "loading": "lazy"
+        },
+        {
+          "alt": "",
+          "width": null,
+          "height": null,
+          "sizes": "96px",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustration of clear water flowing from a borewell outlet",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 760px) 100vw, 50vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustrative homes & villas in Karnataka",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 38vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustrative apartments & layouts in Karnataka",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 38vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustrative farms & agriculture in Karnataka",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 38vw",
+          "loading": "lazy"
+        },
+        {
+          "alt": "Illustrative commercial properties in Karnataka",
+          "width": null,
+          "height": null,
+          "sizes": "(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 38vw",
+          "loading": "lazy"
+        }
+      ],
+      "forms": [
+        {
+          "action": null,
+          "method": null
+        }
+      ]
+    },
+    {
+      "requested": "https://daivikborewells.com/borewell-services",
+      "url": "https://www.daivikborewells.com/borewell-services",
+      "status": 200,
+      "redirect_chain": [
+        "https://daivikborewells.com/borewell-services"
+      ],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Age": "691560",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sat, 10 Oct 2026 10:17:46 GMT",
+        "Etag": "W/\"e09b4e33973985bea6a4b57885a961f4\"",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Matched-Path": "/borewell-services",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::rncwh-1791627466612-2a4610d5ac3b",
+        "Transfer-Encoding": "chunked"
+      },
+      "html_bytes_utf8": 33888,
+      "title": "Borewell Services in Bangalore | Daivik Borewells",
+      "canonical": "https://daivikborewells.com/borewell-services",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Borewell drilling, compact and robo drilling, groundwater assessment, casing, deepening and submersible pump installation across Bangalore.",
+        "application-name": "Daivik Borewells",
+        "creator": "Daivik Borewells",
+        "publisher": "Daivik Borewells",
+        "robots": "index, follow",
+        "googlebot": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+        "category": "Borewell drilling services",
+        "geo.region": "IN-KA",
+        "geo.placename": "Bengaluru",
+        "og:title": "Borewell Drilling in Bangalore | Daivik Borewells",
+        "og:description": "Complete borewell drilling, casing, deepening and pump installation for Bangalore properties, including narrow-road and restricted-access sites.",
+        "og:url": "https://daivikborewells.com",
+        "og:site_name": "Daivik Borewells",
+        "og:locale": "en_IN",
+        "og:image": "https://daivikborewells.com/images/hero-user.webp",
+        "og:image:width": "1448",
+        "og:image:height": "1086",
+        "og:image:alt": "Daivik Borewells: borewell solutions in Bangalore",
+        "og:type": "website",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Borewell Drilling in Bangalore | Daivik Borewells",
+        "twitter:description": "Complete borewell solutions for homes, apartments, farms and commercial properties across Bangalore.",
+        "twitter:image": "https://daivikborewells.com/images/hero-user.webp"
+      },
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Borewell services in Bangalore."
+        },
+        {
+          "level": "h2",
+          "text": "Borewell drilling"
+        },
+        {
+          "level": "h2",
+          "text": "Compact borewell drilling"
+        },
+        {
+          "level": "h2",
+          "text": "Robo borewell drilling"
+        },
+        {
+          "level": "h2",
+          "text": "Groundwater site assessment"
+        },
+        {
+          "level": "h2",
+          "text": "Borewell casing installation"
+        },
+        {
+          "level": "h2",
+          "text": "Borewell deepening"
+        },
+        {
+          "level": "h2",
+          "text": "Submersible pump installation"
+        },
+        {
+          "level": "h2",
+          "text": "Tell us about your site."
+        }
+      ],
+      "main_word_count_including_ui": 193,
+      "links": [
+        "https://daivikborewells.com/#site-visit",
+        "https://wa.me/919448417318?text=Hi%2C%20I%20need%20a%20borewell%20solution%20for%20my%20property%20in%20Bangalore.%20I%20would%20like%20to%20discuss%20my%20site.",
+        "https://www.daivikborewells.com/#equipment",
+        "https://www.daivikborewells.com/#faq",
+        "https://www.daivikborewells.com/#process",
+        "https://www.daivikborewells.com/#services",
+        "https://www.daivikborewells.com/#site-visit",
+        "https://www.daivikborewells.com/#top",
+        "mailto:daivikborewells@gmail.com",
+        "tel:+919448417318"
+      ],
+      "unresolved_fragments": [],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Borewell services in Bangalore",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Service",
+                "name": "Borewell drilling",
+                "description": "Large-rig drilling for open plots, farms, layouts and sites with sufficient operating space.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Service",
+                "name": "Compact borewell drilling",
+                "description": "A smaller drilling footprint for narrow Bangalore roads, existing homes and constrained entrances.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Service",
+                "name": "Robo borewell drilling",
+                "description": "Track-mounted drilling considered for restricted spaces where access and turning room are limited.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Service",
+                "name": "Groundwater site assessment",
+                "description": "A site visit to review location, access, working space and ground conditions before drilling is planned.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Service",
+                "name": "Borewell casing installation",
+                "description": "Casing planned around drilling conditions to help protect and stabilise the borewell.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Service",
+                "name": "Borewell deepening",
+                "description": "Assessment of an existing borewell before determining whether deepening is practical and suitable.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "Service",
+                "name": "Submersible pump installation",
+                "description": "Pump selection, fitting and testing based on borewell results and the property's intended water use.",
+                "provider": {
+                  "@id": "https://daivikborewells.com/#business"
+                },
+                "areaServed": "Bengaluru, Karnataka"
+              }
+            }
+          ]
+        }
+      ],
+      "images": [],
+      "forms": []
+    },
+    {
+      "requested": "https://daivikborewells.com/service-areas",
+      "url": "https://www.daivikborewells.com/service-areas",
+      "status": 200,
+      "redirect_chain": [
+        "https://daivikborewells.com/service-areas"
+      ],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Age": "691556",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sat, 10 Oct 2026 10:17:47 GMT",
+        "Etag": "W/\"3311631107fd7fa886a81af22b8f65ad\"",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Matched-Path": "/service-areas",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::dp499-1791627467880-ace0f8791043",
+        "Transfer-Encoding": "chunked"
+      },
+      "html_bytes_utf8": 33716,
+      "title": "Borewell Service Areas in Bengaluru | Daivik Borewells",
+      "canonical": "https://daivikborewells.com/service-areas",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Daivik Borewells serves Thalaghattapura, Kanakapura Road, Uttarahalli, JP Nagar, Banashankari and nearby South Bengaluru areas.",
+        "application-name": "Daivik Borewells",
+        "creator": "Daivik Borewells",
+        "publisher": "Daivik Borewells",
+        "robots": "index, follow",
+        "googlebot": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+        "category": "Borewell drilling services",
+        "geo.region": "IN-KA",
+        "geo.placename": "Bengaluru",
+        "og:title": "Borewell Drilling in Bangalore | Daivik Borewells",
+        "og:description": "Complete borewell drilling, casing, deepening and pump installation for Bangalore properties, including narrow-road and restricted-access sites.",
+        "og:url": "https://daivikborewells.com",
+        "og:site_name": "Daivik Borewells",
+        "og:locale": "en_IN",
+        "og:image": "https://daivikborewells.com/images/hero-user.webp",
+        "og:image:width": "1448",
+        "og:image:height": "1086",
+        "og:image:alt": "Daivik Borewells: borewell solutions in Bangalore",
+        "og:type": "website",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Borewell Drilling in Bangalore | Daivik Borewells",
+        "twitter:description": "Complete borewell solutions for homes, apartments, farms and commercial properties across Bangalore.",
+        "twitter:image": "https://daivikborewells.com/images/hero-user.webp"
+      },
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Local knowledge. The right machine."
+        },
+        {
+          "level": "h2",
+          "text": "Is your area not listed?"
+        }
+      ],
+      "main_word_count_including_ui": 77,
+      "links": [
+        "https://wa.me/919448417318?text=Hi%2C%20I%20need%20a%20borewell%20solution%20for%20my%20property%20in%20Bangalore.%20I%20would%20like%20to%20discuss%20my%20site.",
+        "https://www.daivikborewells.com/#equipment",
+        "https://www.daivikborewells.com/#faq",
+        "https://www.daivikborewells.com/#process",
+        "https://www.daivikborewells.com/#services",
+        "https://www.daivikborewells.com/#site-visit",
+        "https://www.daivikborewells.com/#top",
+        "mailto:daivikborewells@gmail.com",
+        "tel:+919448417318"
+      ],
+      "unresolved_fragments": [],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Borewell drilling across Bengaluru",
+          "provider": {
+            "@id": "https://daivikborewells.com/#business"
+          },
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Thalaghattapura, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Kanakapura Road, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Uttarahalli, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "JP Nagar, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Banashankari, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Jayanagar, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Kumaraswamy Layout, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Padmanabhanagar, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "RR Nagar, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Kengeri, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Anjanapura, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Bannerghatta Road, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Begur, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Bommanahalli, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "Electronic City, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "NICE Road corridor, Bengaluru, Karnataka"
+            },
+            {
+              "@type": "Place",
+              "name": "South Bengaluru, Bengaluru, Karnataka"
+            }
+          ],
+          "serviceType": "Borewell drilling and complete water solutions"
+        }
+      ],
+      "images": [],
+      "forms": []
+    }
+  ],
+  "limits": {
+    "max_pages": 500,
+    "redirects": 3,
+    "delay_seconds": 1
+  },
+  "limitations": [
+    "No authenticated search or analytics data",
+    "Counts include UI labels; not a content quality target",
+    "Some hash links are JavaScript routing tokens"
+  ]
+}

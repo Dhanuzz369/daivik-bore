@@ -17,9 +17,9 @@ function JsonLd() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@type": "Organization",
         "@id": `${brand.url}/#business`,
-        name: brand.legalName,
+        name: brand.name,
         alternateName: "Daivik Borewells Bangalore",
         url: brand.url,
         logo: `${brand.url}/icon.svg`,
@@ -27,8 +27,7 @@ function JsonLd() {
         email: brand.email,
         telephone: brand.phone,
         description: "Borewell drilling contractor serving homes, apartments, farms and commercial properties across Bangalore with large-rig, compact and robo drilling, casing, deepening and pump installation.",
-        address: { "@type": "PostalAddress", addressLocality: "Bengaluru", addressRegion: "Karnataka", addressCountry: "IN" },
-        areaServed: areas.map((area) => ({ "@type": "Place", name: `${area}, Bengaluru, Karnataka` })),
+        areaServed: areas.map((name) => ({ "@type": "Place", name })),
         contactPoint: {
           "@type": "ContactPoint",
           telephone: brand.phone,
@@ -71,7 +70,7 @@ function JsonLd() {
         name: "Borewell drilling services in Bangalore",
         description: "Site assessment, large-rig, compact and robo borewell drilling, casing, borewell deepening, pump installation and testing.",
         provider: { "@id": `${brand.url}/#business` },
-        areaServed: areas.map((area) => ({ "@type": "Place", name: `${area}, Bengaluru, Karnataka` })),
+        areaServed: areas.map((name) => ({ "@type": "Place", name })),
         serviceType: serviceNames,
       },
       {
@@ -115,7 +114,7 @@ export default function Home() {
             <div className="equipment-track" aria-label="Drilling equipment options" tabIndex={0}>
               {equipment.map((item, index) => <Reveal className="equipment-motion" delay={index * 0.07} key={item.name}><article className={`equipment-item tone-${item.tone}`}>
                 <div className="equipment-image">
-                  <Image src={item.image} alt={`Illustration of ${item.name.toLowerCase()} for ${item.label.toLowerCase()}`} fill sizes="(max-width: 640px) 82vw, (max-width: 900px) 46vw, 31vw" />
+                  <Image src={item.image} alt={`Illustration of ${item.name.toLowerCase()} for ${item.label.toLowerCase()}`} fill sizes="(max-width: 640px) 88vw, (max-width: 900px) 46vw, 31vw" />
                   <span className="equipment-number">0{index + 1}</span>
                 </div>
                 <div className="equipment-copy"><p className="eyebrow">{item.label.toUpperCase()}</p><h3>{item.name}</h3><p>{item.description}</p><div><small>{item.detail}</small><a href="#site-visit" className="icon-button" aria-label={`Enquire about ${item.name.toLowerCase()}`} title={`Enquire about ${item.name.toLowerCase()}`}><ArrowUpRight size={21} /></a></div></div>
@@ -135,7 +134,7 @@ export default function Home() {
                 <div className="service-thumbnail"><Image src={service.image} alt="" fill sizes="96px" /></div>
                 <ArrowUpRight size={21} aria-hidden="true" />
               </a>)}
-              <a href={brand.whatsapp} className="text-link service-question">Not sure where to start? Talk to us <MessageCircle size={18} aria-hidden="true" /></a>
+              <a href="/borewell-services" className="text-link service-question">Explore borewell services <ArrowUpRight size={18} aria-hidden="true" /></a>
             </Reveal>
           </div>
         </section>
@@ -163,7 +162,7 @@ export default function Home() {
 
         <section id="areas" className="section areas-section">
           <div className="wrap areas-layout">
-            <Reveal direction="left"><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> CLOSE TO YOUR SITE</p><h2>Bangalore.<br /><em>And your corner of it.</em></h2><p>Borewell contractors for South Bangalore,<br />from established neighbourhoods to growing layouts.</p><a href={brand.maps} target="_blank" rel="noopener noreferrer" className="text-link">Explore the service area <ArrowUpRight size={17} aria-hidden="true" /></a></Reveal>
+            <Reveal direction="left"><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> CLOSE TO YOUR SITE</p><h2>Bengaluru.<br /><em>And beyond.</em></h2><p>Borewell drilling across Bengaluru and the Nelamangala, Devanahalli and Doddaballapura corridors. Free site visits to discuss access and scope.</p><a href="/service-areas" className="text-link">Explore our service areas <ArrowUpRight size={17} aria-hidden="true" /></a></Reveal>
             <Reveal direction="right" delay={0.08}><ul className="area-list">{areas.map((area) => <li key={area}><Check size={15} aria-hidden="true" />{area}</li>)}</ul><p className="area-note">A little further out? <a href={brand.whatsapp}>Share your location <ArrowUpRight size={14} aria-hidden="true" /></a></p></Reveal>
           </div>
         </section>
@@ -187,7 +186,7 @@ export default function Home() {
         <div className="wrap">
           <div className="footer-main">
             <div><a className="wordmark footer-brand" href="#top" aria-label="Daivik Borewells home"><Logo /></a><p>Water, where you need it.<br />Borewell solutions. Bangalore.</p></div>
-            <div><h3>Explore</h3><a href="#equipment">Our machines</a><a href="#services">Our services</a><a href="#process">How we work</a><a href="#faq">FAQs</a></div>
+            <div><h3>Explore</h3><a href="#equipment">Our machines</a><a href="/borewell-services">Our services</a><a href="/service-areas">Service areas</a><a href="#process">How we work</a><a href="#faq">FAQs</a></div>
             <div><h3>Say hello</h3><a href={brand.phoneHref}>+91 94484 17318</a><a href={brand.emailHref}>{brand.email}</a><a href={brand.whatsapp}>WhatsApp <ArrowUpRight size={13} aria-hidden="true" /></a><a href="#site-visit">Book a site visit</a><span>Bangalore, Karnataka</span></div>
             <a href="#top" className="back-top" aria-label="Back to top" title="Back to top"><ArrowDown size={22} aria-hidden="true" /></a>
           </div>

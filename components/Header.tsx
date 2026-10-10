@@ -5,7 +5,7 @@ import { ArrowUpRight, Menu, Phone, X } from "lucide-react";
 import { brand } from "@/data/site";
 import { Logo } from "@/components/Logo";
 
-const nav = [["Our machines", "equipment"], ["Services", "services"], ["How we work", "process"], ["FAQs", "faq"]];
+const nav = [["Our machines", "/#equipment"], ["Services", "/borewell-services"], ["Service areas", "/service-areas"], ["FAQs", "/#faq"]];
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ export function Header() {
           <Logo />
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
-          {nav.map(([label, id]) => <a href={`/#${id}`} key={id}>{label}</a>)}
+          {nav.map(([label, href]) => <a href={href} key={href}>{label}</a>)}
         </nav>
         <a href={brand.phoneHref} className="header-phone"><Phone size={16} aria-hidden="true" /> 94484 17318</a>
         <a href="/#site-visit" className="button button-primary header-visit">Let&apos;s talk <ArrowUpRight size={16} aria-hidden="true" /></a>
@@ -37,7 +37,7 @@ export function Header() {
         </button>
       </div>
       {open && <nav id="mobile-menu" className="mobile-menu wrap" aria-label="Mobile navigation">
-        {nav.map(([label, id]) => <a href={`/#${id}`} key={id} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={17} /></a>)}
+        {nav.map(([label, href]) => <a href={href} key={href} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={17} aria-hidden="true" /></a>)}
         <a href="/#site-visit" onClick={() => setOpen(false)}>Get a free site visit<ArrowUpRight size={17} /></a>
       </nav>}
     </header>

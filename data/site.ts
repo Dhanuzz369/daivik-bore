@@ -9,7 +9,7 @@ export const brand = {
   emailHref: "mailto:daivikborewells@gmail.com",
   whatsappNumber: "919448417318",
   whatsapp: `https://wa.me/919448417318?text=${encodeURIComponent(whatsappMessage)}`,
-  url: "https://daivikborewells.com",
+  url: "https://www.daivikborewells.com",
   maps: "https://www.google.com/maps/search/?api=1&query=Thalaghattapura+Bangalore",
 };
 
@@ -64,7 +64,7 @@ export const projects = [
   { type: "Commercial properties", service: "A scope that works around your site.", image: images.commercial, key: "commercial" },
 ];
 
-export const areas = ["Thalaghattapura", "Kanakapura Road", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "Kumaraswamy Layout", "Padmanabhanagar", "RR Nagar", "Kengeri", "Anjanapura", "Bannerghatta Road", "Begur", "Bommanahalli", "Electronic City", "NICE Road corridor", "South Bengaluru"];
+export const areas = ["Entire Bengaluru", "Nelamangala", "Airport Road / Devanahalli", "Doddaballapura", "Kanakapura Road", "Kengeri", "Hosur Road", "Thalaghattapura", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "RR Nagar", "Bannerghatta Road", "Electronic City", "NICE Road corridor"];
 
 export const serviceNames = [
   "Borewell drilling",
@@ -92,6 +92,9 @@ export const faqs = [
   { question: "Can you guarantee that we will find water?", answer: "No. A groundwater assessment helps guide the drilling location, but water availability and yield depend on local geology. No survey or drilling method can guarantee water." },
   { question: "Do you handle casing and pump installation too?", answer: "Yes. We can coordinate assessment, machine selection, drilling, casing, pump installation and testing. Pump selection follows the drilling results and your usage requirements." },
   { question: "Can an existing borewell be deepened?", answer: "We first assess the existing borewell, its condition and site access. Deepening is considered only where suitable; the recommendation and scope depend on that assessment." },
-  { question: "Where in Bangalore do you work?", answer: "We serve Thalaghattapura, Kanakapura Road, Uttarahalli, JP Nagar, Banashankari, Jayanagar and nearby South Bangalore areas. Share your location to confirm access and scheduling." },
+  { question: "Where in Bangalore do you work?", answer: "Daivik Borewells serves all Bengaluru, including Kanakapura Road, Kengeri and Hosur Road, as well as Nelamangala, the Airport Road / Devanahalli corridor and Doddaballapura. Share your exact site location to discuss access and scheduling." },
+  { question: "Is the borewell site visit free?", answer: "Yes. Daivik Borewells provides a free site visit. Contact us with your location and requirement to arrange the visit; drilling and installation work are quoted separately." },
+  { question: "What should I prepare before a borewell site visit?", answer: "Share the site location, intended water use and any existing borewell information. Provide entrance width, overhead clearance and photographs of access where possible. Apartment associations should identify a contact person and proposed working area." },
+  { question: "What is borewell casing used for?", answer: "Casing helps support the borewell opening and unstable sections. Its material, diameter and installation depth depend on the conditions encountered; confirm the proposed casing scope in your quotation." },
   { question: "How can I book a borewell site visit?", answer: "Call or WhatsApp Daivik Borewells on +91 94484 17318, email daivikborewells@gmail.com, or submit the site-visit form. Share your Bangalore location and property type so we can discuss access and the suitable drilling machine." },
 ];
