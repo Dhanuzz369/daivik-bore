@@ -84,7 +84,7 @@ export default function Home() {
         <section id="equipment" className="section equipment-section">
           <div className="wrap">
             <Reveal className="section-heading">
-              <div><p className="eyebrow">LARGE-RIG, COMPACT &amp; ROBO BOREWELL DRILLING</p><h2>One site.{" "}<br /><em>Three ways to drill.</em></h2></div>
+              <div><p className="eyebrow">LARGE-RIG, COMPACT &amp; ROBO BOREWELL DRILLING</p><h2>One site.{" "}<br /><em>Three ways to drill a borewell.</em></h2></div>
               <div className="section-aside"><p>Big open plot or a narrow lane.{" "}<br />We start with the space you have.</p><a className="text-link" href="#site-visit">Find the right fit <ArrowUpRight size={17} aria-hidden="true" /></a></div>
             </Reveal>
             <div className="equipment-track" aria-label="Drilling equipment options" tabIndex={0}>
@@ -139,14 +139,14 @@ export default function Home() {
 
         <section id="areas" className="section areas-section">
           <div className="wrap areas-layout">
-            <Reveal direction="left"><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> BOREWELL CONTRACTORS ACROSS BENGALURU</p><h2>Bengaluru.{" "}<br /><em>And beyond.</em></h2><p>Looking for borewell drilling near you? We drill across Bengaluru and the Nelamangala, Devanahalli and Doddaballapura corridors. Free site visits to discuss access and scope.</p><a href="/service-areas" className="text-link">Explore our service areas <ArrowUpRight size={17} aria-hidden="true" /></a></Reveal>
+            <Reveal direction="left"><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> BOREWELL CONTRACTORS ACROSS BENGALURU</p><h2>Borewells across Bengaluru.{" "}<br /><em>And beyond.</em></h2><p>Looking for borewell drilling near you? We drill across Bengaluru and the Nelamangala, Devanahalli and Doddaballapura corridors. Free site visits to discuss access and scope.</p><a href="/service-areas" className="text-link">Explore our service areas <ArrowUpRight size={17} aria-hidden="true" /></a></Reveal>
             <Reveal direction="right" delay={0.08}><ul className="area-list">{areas.map((area) => { const href = areaGuideHref(area); return <li key={area}><Check size={15} aria-hidden="true" />{href ? <a href={href}>{area}</a> : area}</li>; })}</ul><p className="area-note">A little further out? <a href={brand.whatsapp}>Share your location <ArrowUpRight size={14} aria-hidden="true" /></a></p></Reveal>
           </div>
         </section>
 
         <section id="faq" className="section faq-section">
           <div className="wrap faq-layout">
-            <Reveal direction="left"><p className="eyebrow">BOREWELL DRILLING FAQS</p><h2>Good questions.{" "}<br /><em>Straight answers.</em></h2><p>Still have something on your mind?</p><a href={brand.phoneHref} className="text-link">Ask our team <Phone size={16} aria-hidden="true" /></a></Reveal>
+            <Reveal direction="left"><p className="eyebrow">BOREWELL DRILLING FAQS</p><h2>Borewell questions.{" "}<br /><em>Straight answers.</em></h2><p>Still have something on your mind?</p><a href={brand.phoneHref} className="text-link">Ask our team <Phone size={16} aria-hidden="true" /></a></Reveal>
             <Reveal direction="right" delay={0.08}><FAQ /></Reveal>
           </div>
         </section>

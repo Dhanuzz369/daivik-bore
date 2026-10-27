@@ -63,7 +63,7 @@ export function locationSchema(location: LocationRecord) {
     "@type": "Service", name: `Borewell services in ${location.name}`,
     provider: { "@id": businessId },
     areaServed: placesServed(location.coverageLabels), serviceType: serviceNames,
-  }, [], [{ name: "Service areas", path: "/service-areas" }, { name: location.name, path }]);
+  }, [faqSchema(`${brand.url}${path}#faq`, location.questions)], [{ name: "Service areas", path: "/service-areas" }, { name: location.name, path }]);
 }
 
 type Crumb = { name: string; path: string };
@@ -82,6 +82,10 @@ export function directorySchema(path: string, name: string, mainEntity: object, 
       ...extra,
     ],
   };
+}
+
+export function faqSchema(id: string, questions: readonly { question: string; answer: string }[]) {
+  return { "@type": "FAQPage", "@id": id, mainEntity: questions.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
 }
 
 export function jsonLd(schema: object) {

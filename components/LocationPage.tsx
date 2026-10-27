@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight, Check, Mail, MapPin, MessageCircle, Phone, Plus } from "lucide-react";
-import { getNearbyLocations, type LocationRecord } from "@/data/locations";
+import { getNearbyLocations, locationPlace, type LocationRecord } from "@/data/locations";
 import { brand, images, serviceNames } from "@/data/site";
 import { serviceSlug } from "@/lib/seo";
 import { Header } from "@/components/Header";
@@ -11,6 +11,7 @@ import { MotionProvider } from "@/components/Motion";
 // Publication validation belongs to the route; this template only presents content.
 export function LocationPage({ location }: { location: LocationRecord }) {
   const nearby = getNearbyLocations(location.slug);
+  const place = locationPlace(location);
   return <MotionProvider><div className="location-page" id="top">
     <a className="skip-link" href="#location-main">Skip to content</a>
     <Header />
@@ -21,7 +22,7 @@ export function LocationPage({ location }: { location: LocationRecord }) {
         <div className="wrap location-hero-inner">
           <nav className="location-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/service-areas">Service areas</a></nav>
           <p className="eyebrow"><MapPin size={14} aria-hidden="true" /> DAIVIK BOREWELLS</p>
-          <h1 id="location-title">Borewell drilling{" "}<em>in {location.name}.</em></h1>
+          <h1 id="location-title">Borewell drilling{" "}<em>{place}.</em></h1>
           <p className="location-hero-description">Borewell contractor serving {location.coverageLabels.join(", ")}. Drilling, casing and pump installation, starting with a free site visit.</p>
           <div className="location-actions"><a className="button button-primary" href={brand.phoneHref}><Phone size={18} aria-hidden="true" />{brand.phone}</a><a className="button button-light" href={brand.whatsapp}><MessageCircle size={18} aria-hidden="true" />WhatsApp</a></div>
           <a className="text-link" href="/#site-visit">Arrange a free site visit <ArrowUpRight size={17} aria-hidden="true" /></a>
@@ -29,13 +30,13 @@ export function LocationPage({ location }: { location: LocationRecord }) {
       </section>
       <div className="location-assurance"><div className="wrap"><span>Access-led machine selection</span><span>Drilling, casing &amp; pump installation</span><a href={brand.emailHref}><Mail size={16} aria-hidden="true" />Email our team</a></div></div>
       <section className="section location-guidance"><div className="wrap location-columns">
-        <div><p className="eyebrow">YOUR LOCATION. YOUR REQUIREMENTS.</p><h2>Borewell contractors{" "}<em>in {location.name}.</em></h2><p>{location.introduction}</p></div>
+        <div><p className="eyebrow">YOUR LOCATION. YOUR REQUIREMENTS.</p><h2>Borewell contractors{" "}<em>{place}.</em></h2><p>{location.introduction}</p></div>
         <div className="location-local-sections">{location.sections.map(section => <article key={section.heading}><h3>{section.heading}</h3><p>{section.body}</p></article>)}</div>
       </div></section>
       <section className="section location-coverage"><div className="wrap location-columns">
-        <div><p className="eyebrow">WHERE WE WORK</p><h2>Localities covered{" "}<em>in {location.name}.</em></h2><ul className="location-coverage-list">{location.coverageLabels.map(label => <li key={label}><Check size={18} aria-hidden="true" />{label}</li>)}</ul></div>
-        <div><h3>Borewell services in {location.name}</h3><ul className="location-service-links">{serviceNames.map(name => <li key={name}><a href={`/borewell-services#${serviceSlug(name)}`}>{name} in {location.name}</a></li>)}</ul>
-          {nearby.length > 0 && <><h3>Nearby service areas</h3><ul className="location-service-links">{nearby.map(record => <li key={record.slug}><a href={`/service-areas/${record.slug}`}>Borewell drilling in {record.name}</a></li>)}</ul></>}
+        <div><p className="eyebrow">WHERE WE WORK</p><h2>Localities covered{" "}<em>{place}.</em></h2><ul className="location-coverage-list">{location.coverageLabels.map(label => <li key={label}><Check size={18} aria-hidden="true" />{label}</li>)}</ul></div>
+        <div><h3>Borewell services {place}</h3><ul className="location-service-links">{serviceNames.map(name => <li key={name}><a href={`/borewell-services#${serviceSlug(name)}`}>{name} {place}</a></li>)}</ul>
+          {nearby.length > 0 && <><h3>Nearby service areas</h3><ul className="location-service-links">{nearby.map(record => <li key={record.slug}><a href={`/service-areas/${record.slug}`}>Borewell drilling {locationPlace(record)}</a></li>)}</ul></>}
         </div>
       </div></section>
       <section className="section location-preparation"><div className="wrap location-columns"><div><p className="eyebrow">BEFORE WE BREAK GROUND</p><h2>Prepare for your site visit</h2><a className="text-link" href="/#site-visit">Book a free site visit <ArrowUpRight size={17} aria-hidden="true" /></a></div><ul>{[

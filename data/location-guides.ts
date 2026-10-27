@@ -10,7 +10,7 @@ export const locationGuides: Record<string, {
       { heading: "Plan the water system around its use", body: "Tell us whether the requirement is for a home, a plot, farming or a commercial property. Discuss drilling, casing and pump installation as separate parts of the quotation. For a managed site, arrange a contact who can coordinate entry; scheduling and machine suitability are confirmed for the property." },
     ],
     questions: [
-      { question: "Do you serve Bagalur as well as Devanahalli?", answer: "Yes. Devanahalli, Airport Road and Bagalur are included in our confirmed coverage. Call 9448417318 with the exact site location to arrange a free visit." },
+      { question: "Do you serve Bagalur as well as Devanahalli?", answer: "Yes. Devanahalli, Airport Road and Bagalur are all within our service area. Call +91 94484 17318 with the exact site location to arrange a free visit." },
       { question: "Can I book using an airport landmark?", answer: "A landmark is useful for orientation, but please also send a property map pin and entrance photographs. The team needs the actual access route before selecting a drilling machine." },
     ],
   },
@@ -32,7 +32,7 @@ export const locationGuides: Record<string, {
       { heading: "Bring existing borewell records", body: "For an existing Doddaballapura borewell, share any available depth, casing and pump information. If you are considering deepening or a pump installation, describe the current problem and intended use. The team must assess the existing borewell before discussing whether deepening is suitable." },
     ],
     questions: [
-      { question: "Is the Doddaballapura Apparel Park area covered?", answer: "Yes, the owner has confirmed coverage of Doddaballapura and the Apparel Park area. Entry, scope and scheduling must still be arranged for the individual property." },
+      { question: "Is the Doddaballapura Apparel Park area covered?", answer: "Yes, we cover Doddaballapura and the Apparel Park area. Entry, scope and scheduling must still be arranged for the individual property." },
       { question: "Can an older borewell be deepened?", answer: "Deepening is a service we offer, but it is not suitable in every case. Share existing records and arrange an assessment before deciding on the work." },
     ],
   },
@@ -65,7 +65,7 @@ export const locationGuides: Record<string, {
       { heading: "Discuss installation scope before mobilization", body: "For a commercial or industrial requirement, explain the intended water use and any existing borewell or pump arrangement. Confirm which drilling work, casing materials, pump fitting and testing are included in the proposed scope. Coverage does not imply work for any particular company or industrial authority." },
     ],
     questions: [
-      { question: "Are Bommasandra and Attibele included?", answer: "Yes. Hosur Road, Electronic City, Bommasandra and Attibele are owner-confirmed service areas." },
+      { question: "Are Bommasandra and Attibele included?", answer: "Yes. Hosur Road, Electronic City, Bommasandra and Attibele are all within our service area." },
       { question: "Can I arrange drilling for an industrial property?", answer: "Yes, discuss the requirement with our team. Provide the property pin, entry arrangements, working space and an on-site contact; applicable permissions and the work scope need to be addressed for that site." },
     ],
   },
@@ -87,7 +87,7 @@ export const locationGuides: Record<string, {
       { heading: "Review an existing water arrangement", body: "For a Whitefield property with an existing borewell, send any available pump, casing and depth records. Describe whether you need a new installation, an assessment or a discussion about deepening. An assessment cannot guarantee groundwater availability or a specific improvement in yield." },
     ],
     questions: [
-      { question: "Is EPIP Whitefield part of your service area?", answer: "Yes, EPIP Whitefield is confirmed coverage. The team will discuss the individual property's scope, access and schedule." },
+      { question: "Is EPIP Whitefield part of your service area?", answer: "Yes, EPIP Whitefield is within our service area. The team will discuss the individual property's scope, access and schedule." },
       { question: "Do you install submersible pumps in Whitefield?", answer: "Yes, submersible pump selection, fitting and testing are within our services. Share borewell results and intended use so the installation scope can be discussed." },
     ],
   },
@@ -98,7 +98,7 @@ export const locationGuides: Record<string, {
       { heading: "Define the borewell quotation", body: "For a Peenya industrial enquiry, separate the drilling requirement from casing and pump installation. Share existing borewell records when available and confirm the materials and testing included. The property contact should address applicable approvals; this page does not offer regulatory clearance or a guaranteed groundwater result." },
     ],
     questions: [
-      { question: "Can you discuss a borewell for a Peenya industrial site?", answer: "Yes, Peenya is a confirmed service area. Call 9448417318 with the site location and access information to arrange a free visit." },
+      { question: "Can you discuss a borewell for a Peenya industrial site?", answer: "Yes, Peenya is within our service area. Call +91 94484 17318 with the site location and access information to arrange a free visit." },
       { question: "Does the free visit include installation work?", answer: "No. The site visit is free; drilling, materials, pump installation and any agreed testing should be specified separately in the quotation." },
     ],
   },
@@ -114,13 +114,13 @@ export const locationGuides: Record<string, {
     ],
   },
   "dabaspet-sompura": {
-    introduction: "Dabaspet and Sompura are included in Daivik Borewells' confirmed coverage. For an industrial plot or other property, a free site visit helps frame the discussion about drilling access, casing requirements and the intended water system.",
+    introduction: "Dabaspet and Sompura are within Daivik Borewells' service area. For an industrial plot or other property, a free site visit helps frame the discussion about drilling access, casing requirements and the intended water system.",
     sections: [
       { heading: "Identify your Sompura or Dabaspet site", body: "Provide the individual property map pin, approach route and entrance rather than only a park or phase name. Send photographs of the final access stretch and proposed drilling area. The team confirms arrangements for the actual property before scheduling work." },
       { heading: "Plan a plot enquiry before equipment selection", body: "Explain the intended water use, whether a borewell already exists and the available working space. Discuss casing and pump installation separately from drilling. An industrial plot label does not establish groundwater availability, a suitable drilling depth or the permissions applicable to that property." },
     ],
     questions: [
-      { question: "Do you serve both Dabaspet and Sompura?", answer: "Yes, both are confirmed coverage. Send your exact property location and discuss scheduling with the team." },
+      { question: "Do you serve both Dabaspet and Sompura?", answer: "Yes, we serve both. Send your exact property location and discuss scheduling with the team." },
       { question: "Can I book a rig using a phase name alone?", answer: "Please also provide a map pin, entrance and working-area photographs. A phase name does not establish the final approach or machine suitability." },
     ],
   },
@@ -131,7 +131,7 @@ export const locationGuides: Record<string, {
       { heading: "Match the discussion to the intended use", body: "A home, farm and industrial property may have different intended water uses. Explain your requirement and share any available borewell results or installation records. Pump selection follows the borewell results and agreed scope; a locality name cannot establish pump specifications." },
     ],
     questions: [
-      { question: "Is Hoskote Industrial Area covered?", answer: "Yes, the owner has confirmed Hoskote Industrial Area coverage. Individual entry arrangements and work scheduling must still be discussed." },
+      { question: "Is Hoskote Industrial Area covered?", answer: "Yes, we cover Hoskote Industrial Area. Individual entry arrangements and work scheduling must still be discussed." },
       { question: "Can you select a pump before drilling?", answer: "You can discuss the intended use in advance, but final pump selection should follow the borewell results and installation requirements." },
     ],
   },
@@ -142,18 +142,18 @@ export const locationGuides: Record<string, {
       { heading: "Set out the new or existing requirement", body: "For a new borewell, describe intended water use and the available working area. For an existing one, share casing, depth and pump records where available. Ask which drilling, materials, installation and testing items are included before agreeing to the quotation." },
     ],
     questions: [
-      { question: "Do you serve Bidadi industrial properties?", answer: "Yes, Bidadi is confirmed coverage, including industrial enquiries. Share the site entrance and a contact who can coordinate access." },
+      { question: "Do you serve Bidadi industrial properties?", answer: "Yes, we serve Bidadi, including industrial enquiries. Share the site entrance and a contact who can coordinate access." },
       { question: "Does an open plot guarantee large-rig access?", answer: "No. The approach, gate, turning space and overhead clearance still need to be assessed before machine suitability is confirmed." },
     ],
   },
   harohalli: {
-    introduction: "Harohalli is within Daivik Borewells' confirmed service coverage. Contact the team for drilling, casing, groundwater site assessment or submersible pump installation, starting with a free visit to discuss your property and intended water use.",
+    introduction: "Harohalli is within Daivik Borewells' service area. Contact the team for drilling, casing, groundwater site assessment or submersible pump installation, starting with a free visit to discuss your property and intended water use.",
     sections: [
       { heading: "Arrange entry for a Harohalli property", body: "For an industrial site, nominate a contact who can explain access arrangements and identify the work area. For a home, farm or plot, send entrance and approach photographs with the map pin. Coverage does not imply an affiliation with any industrial park or its tenants." },
       { heading: "Keep assessment and outcomes separate", body: "A site visit helps discuss access, working space and the proposed scope. It does not promise water availability, depth or yield in Harohalli. Ask about the proposed assessment method and its limitations, and confirm drilling, casing and installation items in the quotation." },
     ],
     questions: [
-      { question: "Can I arrange a free site visit in Harohalli?", answer: "Yes. Call 9448417318 or send the exact site location on WhatsApp so access and scheduling can be discussed." },
+      { question: "Can I arrange a free site visit in Harohalli?", answer: "Yes. Call +91 94484 17318 or send the exact site location on WhatsApp so access and scheduling can be discussed." },
       { question: "Can the visit guarantee groundwater?", answer: "No. Groundwater availability and yield depend on site conditions and geology. An assessment or drilling method does not guarantee a result." },
     ],
   },
@@ -164,7 +164,7 @@ export const locationGuides: Record<string, {
       { heading: "Prepare an industrial water-system brief", body: "Share the intended water use and any existing borewell or pump records. Discuss drilling, casing and pump fitting as an agreed scope, with installation and testing items confirmed in writing. Applicable approvals and property permissions remain site-specific; coverage does not establish them." },
     ],
     questions: [
-      { question: "Is Hardware Park at Huvinayakanahalli covered?", answer: "Yes, the owner has confirmed coverage of Bengaluru Hardware Park and Huvinayakanahalli alongside the Aerospace Park area." },
+      { question: "Is Hardware Park at Huvinayakanahalli covered?", answer: "Yes, we cover Bengaluru Hardware Park and Huvinayakanahalli as well as the Aerospace Park area." },
       { question: "Are you an official KIADB contractor?", answer: "No such affiliation is claimed on this website. This page describes the areas served by Daivik Borewells, with individual work arrangements discussed with the property contact." },
     ],
   },
@@ -175,7 +175,7 @@ export const locationGuides: Record<string, {
       { heading: "Coordinate residential and shared-site work", body: "For a home or apartment site, identify the proposed drilling area and a responsible contact. For an existing borewell, gather depth, casing and pump records where available. Discuss access with the property owner or association before arranging work; the team assesses the actual site rather than assuming one machine fits the whole neighbourhood." },
     ],
     questions: [
-      { question: "Do you serve JP Nagar, Jayanagar and Banashankari?", answer: "Yes. These areas, along with Thalaghattapura, Uttarahalli, Bannerghatta Road and the NICE Road corridor, are included in our confirmed Bengaluru coverage." },
+      { question: "Do you serve JP Nagar, Jayanagar and Banashankari?", answer: "Yes. These areas, along with Thalaghattapura, Uttarahalli, Bannerghatta Road and the NICE Road corridor, are included in our Bengaluru service area." },
       { question: "Can you assess a restricted residential entrance?", answer: "Yes, send entrance and working-space photographs for an access discussion. Compact and robo options are available, but the suitable machine is confirmed for the actual site." },
     ],
   },

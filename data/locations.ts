@@ -67,13 +67,20 @@ export function getNearbyLocations(slug: string): readonly LocationRecord[] {
   return getPublishedLocations().filter(record => slugs.has(record.slug));
 }
 
+// Road corridors read "along Hosur Road"; everything else "in Peenya".
+const corridors = new Set(["hosur-road", "kanakapura-road"]);
+export function locationPlace(record: Pick<LocationRecord, "name"> & { slug?: string }): string {
+  return `${record.slug && corridors.has(record.slug) ? "along" : "in"} ${record.name}`;
+}
+
 // Keyword-led title; falls back to the shorter form when the area name is long.
-export function locationTitle(record: Pick<LocationRecord, "name">): string {
+export function locationTitle(record: Pick<LocationRecord, "name"> & { slug?: string }): string {
+  const place = locationPlace(record);
   const candidates = [
-    `Borewell Drilling Contractors in ${record.name} | Daivik Borewells`,
-    `Borewell Drilling in ${record.name} | Daivik Borewells`,
+    `Borewell Drilling Contractors ${place} | Daivik Borewells`,
+    `Borewell Drilling ${place} | Daivik Borewells`,
   ];
-  return candidates.find(title => title.length <= 70) ?? `Borewell Drilling in ${record.name}`;
+  return candidates.find(title => title.length <= 70) ?? `Borewell Drilling ${place}`;
 }
 
 export function locationKeywords(record: Pick<LocationRecord, "name" | "coverageLabels">): string[] {

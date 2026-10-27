@@ -23,7 +23,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const title = locationTitle(location);
   const lead = `Borewell drilling in ${location.name}. `;
   const summary = locationSummary(location);
-  const description = summary.includes(location.name) ? summary : lead + locationSummary(location, 160 - lead.length);
+  const base = summary.includes(location.name) ? summary : lead + locationSummary(location, 160 - lead.length);
+  const tail = " Robo drilling, casing and pumps. Free site visit.";
+  const description = base.length + tail.length <= 160 ? base + tail : base;
   const image = `${brand.url}/images/hero-user.webp`;
   return { title: { absolute: title }, description, keywords: locationKeywords(location), alternates: { canonical: url, languages: { "en-IN": url } },
     openGraph: { title, description, url, siteName: brand.name, locale: "en_IN", type: "website", images: [{ url: image, width: 1448, height: 1086, alt: "Borewell drilling rig" }] },
