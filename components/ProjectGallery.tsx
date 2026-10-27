@@ -14,7 +14,7 @@ export function ProjectGallery() {
   }
   return <>
     <Reveal className="section-heading">
-      <div><p className="eyebrow">BUILT AROUND YOUR PROPERTY</p><h2>Different sites.<br /><em>The same care.</em></h2></div>
+      <div><p className="eyebrow">BUILT AROUND YOUR PROPERTY</p><h2>Different sites.{" "}<br /><em>The same care.</em></h2></div>
       <div className="gallery-navigation"><button className="icon-button" aria-label="Previous property types" title="Previous property types" onClick={() => scroll(-1)}><ArrowLeft size={21} /></button><button className="icon-button" aria-label="Next property types" title="Next property types" onClick={() => scroll(1)}><ArrowRight size={21} /></button></div>
     </Reveal>
     <Reveal delay={0.06}>

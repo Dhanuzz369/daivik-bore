@@ -22,9 +22,9 @@ export function Hero() {
         <div className="wrap hero-inner">
           <m.div className="hero-copy" initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { delayChildren: 0.04, staggerChildren: 0.05 } } }}>
             <m.p className="eyebrow" data-motion="hero-copy" variants={item} transition={{ duration: 0.45, ease: motionEaseOut }}><MapPin size={14} aria-hidden="true" /> ROOTED IN BANGALORE</m.p>
-            <m.h1 id="hero-title" data-motion="hero-copy" variants={item} transition={{ duration: 0.5, ease: motionEaseOut }}>Daivik<br />Borewells<span>.</span></m.h1>
+            <m.h1 id="hero-title" data-motion="hero-copy" variants={item} transition={{ duration: 0.5, ease: motionEaseOut }}>Daivik{" "}<br />Borewells<span>.</span><span className="hero-title-service">Borewell drilling contractor in Bengaluru</span></m.h1>
             <m.p className="hero-tagline" data-motion="hero-copy" variants={item} transition={{ duration: 0.45, ease: motionEaseOut }}>Water, where you need it.</m.p>
-            <m.p className="hero-description" data-motion="hero-copy" variants={item} transition={{ duration: 0.45, ease: motionEaseOut }}>Borewell drilling across Bengaluru.<br />The right machine for your site.</m.p>
+            <m.p className="hero-description" data-motion="hero-copy" variants={item} transition={{ duration: 0.45, ease: motionEaseOut }}>Large-rig, compact and robo drilling.{" "}<br />The right machine for your site.</m.p>
             <m.div className="hero-actions" data-motion="hero-copy" variants={item} transition={{ duration: 0.45, ease: motionEaseOut }}>
               <a href={brand.phoneHref} className="button button-primary"><Phone size={17} aria-hidden="true" /> Call now</a>
               <a href={brand.whatsapp} className="button button-light"><MessageCircle size={18} aria-hidden="true" /> WhatsApp</a>

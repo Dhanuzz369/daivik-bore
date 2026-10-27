@@ -52,6 +52,32 @@ export const locationRecords: readonly LocationRecord[] = [
   approvedLocation("south-bengaluru", "South Bengaluru", ["Thalaghattapura", "Uttarahalli", "JP Nagar", "Banashankari", "Jayanagar", "Bannerghatta Road", "NICE Road corridor"], ["thalaghattapura", "uttarahalli", "jp-nagar", "banashankari", "jayanagar", "bannerghatta-road", "nice-road-corridor"]),
 ];
 
+// Neighbouring guides, grouped by side of the city, for cross-linking.
+const regions: readonly (readonly string[])[] = [
+  ["devanahalli-airport-road", "aerospace-hardware-parks", "doddaballapura", "bhartiya-city-thanisandra"],
+  ["nelamangala", "peenya", "dabaspet-sompura"],
+  ["whitefield", "hoskote", "bhartiya-city-thanisandra"],
+  ["hosur-road", "jigani", "south-bengaluru"],
+  ["kengeri", "bidadi", "kanakapura-road", "harohalli", "south-bengaluru"],
+];
+
+export function getNearbyLocations(slug: string): readonly LocationRecord[] {
+  const slugs = new Set(regions.filter(group => group.includes(slug)).flat());
+  slugs.delete(slug);
+  return getPublishedLocations().filter(record => slugs.has(record.slug));
+}
+
+// First sentences of the introduction, up to a meta-description length.
+export function locationSummary(record: LocationRecord, max = 160): string {
+  const sentences = record.introduction.match(/[^.!?]+[.!?]+/g) ?? [record.introduction];
+  let summary = "";
+  for (const sentence of sentences.map(s => s.trim())) {
+    if (summary && (summary + " " + sentence).length > max) break;
+    summary = summary ? `${summary} ${sentence}` : sentence;
+  }
+  return summary.length > max ? `${summary.slice(0, summary.lastIndexOf(" ", max - 1))}…` : summary;
+}
+
 /**
  * Mechanical eligibility only: the named reviewer must verify original local
  * value and source accuracy before approval. Nonempty text cannot prove quality.

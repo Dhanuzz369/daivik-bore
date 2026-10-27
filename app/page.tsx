@@ -10,67 +10,43 @@ import { ProjectGallery } from "@/components/ProjectGallery";
 import { Timeline } from "@/components/Timeline";
 import { Logo } from "@/components/Logo";
 import { MotionProvider, Reveal } from "@/components/Motion";
-import { areas, brand, equipment, faqs, images, serviceNames, services } from "@/data/site";
+import { areas, brand, contentUpdatedAt, equipment, faqs, images, serviceNames, services } from "@/data/site";
+import { getPublishedLocations } from "@/data/locations";
+import { businessId, businessSchema, jsonLd, placesServed, websiteSchema } from "@/lib/seo";
+
+// Match a coverage label (e.g. "Airport Road / Devanahalli") to its published area guide.
+function areaGuideHref(area: string) {
+  if (area === "Entire Bengaluru") return "/service-areas";
+  const parts = [area, ...area.split(" / ")];
+  const location = getPublishedLocations().find(record => parts.some(part => part === record.name || record.coverageLabels.includes(part)));
+  return location ? `/service-areas/${location.slug}` : undefined;
+}
 
 function JsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${brand.url}/#business`,
-        name: brand.name,
-        alternateName: "Daivik Borewells Bangalore",
-        url: brand.url,
-        logo: `${brand.url}/icon.svg`,
-        image: `${brand.url}/images/hero-user.webp`,
-        email: brand.email,
-        telephone: brand.phone,
-        description: "Borewell drilling contractor serving homes, apartments, farms and commercial properties across Bangalore with large-rig, compact and robo drilling, casing, deepening and pump installation.",
-        areaServed: areas.map((name) => ({ "@type": "Place", name })),
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: brand.phone,
-          email: brand.email,
-          contactType: "customer service",
-          areaServed: "IN-KA",
-          availableLanguage: "English",
-        },
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Borewell services in Bangalore",
-          itemListElement: serviceNames.map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
-        },
-        knowsAbout: serviceNames,
-        slogan: "Water, where you need it.",
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${brand.url}/#website`,
-        url: brand.url,
-        name: brand.name,
-        alternateName: "Daivik Borewells Bangalore",
-        inLanguage: "en-IN",
-        publisher: { "@id": `${brand.url}/#business` },
-      },
+      businessSchema(),
+      websiteSchema(),
       {
         "@type": "WebPage",
         "@id": `${brand.url}/#webpage`,
-        url: brand.url,
+        url: `${brand.url}/`,
         name: "Borewell Drilling in Bangalore | Daivik Borewells",
         description: "Borewell drilling, casing, deepening and pump installation for Bangalore homes, apartments, farms and commercial properties.",
         isPartOf: { "@id": `${brand.url}/#website` },
-        about: { "@id": `${brand.url}/#business` },
+        about: { "@id": businessId },
         primaryImageOfPage: { "@type": "ImageObject", url: `${brand.url}/images/hero-user.webp`, width: 1448, height: 1086 },
         inLanguage: "en-IN",
+        dateModified: contentUpdatedAt,
       },
       {
         "@type": "Service",
         "@id": `${brand.url}/#borewell-service`,
         name: "Borewell drilling services in Bangalore",
         description: "Site assessment, large-rig, compact and robo borewell drilling, casing, borewell deepening, pump installation and testing.",
-        provider: { "@id": `${brand.url}/#business` },
-        areaServed: areas.map((name) => ({ "@type": "Place", name })),
+        provider: { "@id": businessId },
+        areaServed: placesServed(areas),
         serviceType: serviceNames,
       },
       {
@@ -80,7 +56,7 @@ function JsonLd() {
       },
     ],
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }} />;
 }
 
 export default function Home() {
@@ -99,7 +75,7 @@ export default function Home() {
           <div className="wrap">
             <Reveal className="section-heading compact-heading">
               <div><p className="eyebrow">YOUR SITE. YOUR SOLUTION.</p><h2>What are you planning for?</h2></div>
-              <p>A home, a harvest, a whole new project.<br />It starts with the right borewell.</p>
+              <p>A home, a harvest, a whole new project.{" "}<br />It starts with the right borewell.</p>
             </Reveal>
             <Reveal delay={0.08}><SolutionSelector /></Reveal>
           </div>
@@ -108,8 +84,8 @@ export default function Home() {
         <section id="equipment" className="section equipment-section">
           <div className="wrap">
             <Reveal className="section-heading">
-              <div><p className="eyebrow">THE RIGHT MACHINE MAKES THE DIFFERENCE</p><h2>One site.<br /><em>Three ways to drill.</em></h2></div>
-              <div className="section-aside"><p>Big open plot or a narrow lane.<br />We start with the space you have.</p><a className="text-link" href="#site-visit">Find the right fit <ArrowUpRight size={17} aria-hidden="true" /></a></div>
+              <div><p className="eyebrow">THE RIGHT MACHINE MAKES THE DIFFERENCE</p><h2>One site.{" "}<br /><em>Three ways to drill.</em></h2></div>
+              <div className="section-aside"><p>Big open plot or a narrow lane.{" "}<br />We start with the space you have.</p><a className="text-link" href="#site-visit">Find the right fit <ArrowUpRight size={17} aria-hidden="true" /></a></div>
             </Reveal>
             <div className="equipment-track" aria-label="Drilling equipment options" tabIndex={0}>
               {equipment.map((item, index) => <Reveal className="equipment-motion" delay={index * 0.07} key={item.name}><article className={`equipment-item tone-${item.tone}`}>
@@ -126,7 +102,7 @@ export default function Home() {
 
         <section id="services" className="section services-section">
           <div className="wrap services-layout">
-            <Reveal className="services-intro" direction="left"><p className="eyebrow">MORE THAN DRILLING</p><h2>From the first survey<br /><em>to the first flow.</em></h2><p>One coordinated borewell solution.<br />Every stage considered.</p><div className="services-photo"><Image src={images.survey} alt="Illustration of an Indian technician assessing a borewell site with survey equipment" fill sizes="(max-width: 760px) 100vw, 40vw" /></div></Reveal>
+            <Reveal className="services-intro" direction="left"><p className="eyebrow">MORE THAN DRILLING</p><h2>From the first survey{" "}<br /><em>to the first flow.</em></h2><p>One coordinated borewell solution.{" "}<br />Every stage considered.</p><div className="services-photo"><Image src={images.survey} alt="Illustration of an Indian technician assessing a borewell site with survey equipment" fill sizes="(max-width: 760px) 100vw, 40vw" /></div></Reveal>
             <Reveal className="service-list" direction="right" delay={0.08}>
               {services.map((service, index) => <a key={service.name} href="#site-visit" className="service-row">
                 <span className="service-index">0{index + 1}</span>
@@ -148,7 +124,7 @@ export default function Home() {
 
         <section id="about" className="care-section">
           <Reveal className="care-image" direction="left" amount={0.3}><Image src={images.water} alt="Illustration of clear water flowing from a borewell outlet" fill sizes="(max-width: 760px) 100vw, 50vw" /></Reveal>
-          <Reveal className="care-copy" direction="right" amount={0.3}><p className="eyebrow">GOOD WORK STARTS BELOW THE SURFACE</p><h2>Grounded in care.<br /><em>Built for your site.</em></h2>
+          <Reveal className="care-copy" direction="right" amount={0.3}><p className="eyebrow">GOOD WORK STARTS BELOW THE SURFACE</p><h2>Grounded in care.{" "}<br /><em>Built for your site.</em></h2>
             <ul className="care-points">
               <li><ShieldCheck size={22} strokeWidth={1.5} aria-hidden="true" /><div><h3>Access comes first</h3><p>A machine selected for the room you actually have.</p></div></li>
               <li><CheckCheck size={22} strokeWidth={1.5} aria-hidden="true" /><div><h3>A clear scope</h3><p>Understand the work before drilling begins.</p></div></li>
@@ -162,14 +138,14 @@ export default function Home() {
 
         <section id="areas" className="section areas-section">
           <div className="wrap areas-layout">
-            <Reveal direction="left"><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> CLOSE TO YOUR SITE</p><h2>Bengaluru.<br /><em>And beyond.</em></h2><p>Borewell drilling across Bengaluru and the Nelamangala, Devanahalli and Doddaballapura corridors. Free site visits to discuss access and scope.</p><a href="/service-areas" className="text-link">Explore our service areas <ArrowUpRight size={17} aria-hidden="true" /></a></Reveal>
-            <Reveal direction="right" delay={0.08}><ul className="area-list">{areas.map((area) => <li key={area}><Check size={15} aria-hidden="true" />{area}</li>)}</ul><p className="area-note">A little further out? <a href={brand.whatsapp}>Share your location <ArrowUpRight size={14} aria-hidden="true" /></a></p></Reveal>
+            <Reveal direction="left"><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> CLOSE TO YOUR SITE</p><h2>Bengaluru.{" "}<br /><em>And beyond.</em></h2><p>Borewell drilling across Bengaluru and the Nelamangala, Devanahalli and Doddaballapura corridors. Free site visits to discuss access and scope.</p><a href="/service-areas" className="text-link">Explore our service areas <ArrowUpRight size={17} aria-hidden="true" /></a></Reveal>
+            <Reveal direction="right" delay={0.08}><ul className="area-list">{areas.map((area) => { const href = areaGuideHref(area); return <li key={area}><Check size={15} aria-hidden="true" />{href ? <a href={href}>{area}</a> : area}</li>; })}</ul><p className="area-note">A little further out? <a href={brand.whatsapp}>Share your location <ArrowUpRight size={14} aria-hidden="true" /></a></p></Reveal>
           </div>
         </section>
 
         <section id="faq" className="section faq-section">
           <div className="wrap faq-layout">
-            <Reveal direction="left"><p className="eyebrow">BEFORE WE BREAK GROUND</p><h2>Good questions.<br /><em>Straight answers.</em></h2><p>Still have something on your mind?</p><a href={brand.phoneHref} className="text-link">Ask our team <Phone size={16} aria-hidden="true" /></a></Reveal>
+            <Reveal direction="left"><p className="eyebrow">BEFORE WE BREAK GROUND</p><h2>Good questions.{" "}<br /><em>Straight answers.</em></h2><p>Still have something on your mind?</p><a href={brand.phoneHref} className="text-link">Ask our team <Phone size={16} aria-hidden="true" /></a></Reveal>
             <Reveal direction="right" delay={0.08}><FAQ /></Reveal>
           </div>
         </section>
@@ -177,7 +153,7 @@ export default function Home() {
         <section id="site-visit" className="section contact-section">
           {["home", "apartment", "farm", "commercial"].map((key) => <span key={key} id={`site-visit-${key}`} className="anchor-target" aria-hidden="true" />)}
           <div className="wrap contact-layout">
-            <Reveal className="contact-copy" direction="left"><p className="eyebrow">LET'S TALK ABOUT YOUR SITE</p><h2>Your next step?<br /><em>A conversation.</em></h2><p>Tell us where you are.<br />We&apos;ll help you work out what comes next.</p><a className="contact-number" href={brand.phoneHref}>94484 17318 <ArrowUpRight size={28} aria-hidden="true" /></a><span className="contact-caption">Call Daivik Borewells</span><a href={brand.whatsapp} className="text-link"><MessageCircle size={18} aria-hidden="true" /> Prefer WhatsApp? Start here</a><a href={brand.emailHref} className="text-link"><Mail size={18} aria-hidden="true" /> {brand.email}</a></Reveal>
+            <Reveal className="contact-copy" direction="left"><p className="eyebrow">LET'S TALK ABOUT YOUR SITE</p><h2>Your next step?{" "}<br /><em>A conversation.</em></h2><p>Tell us where you are.{" "}<br />We&apos;ll help you work out what comes next.</p><a className="contact-number" href={brand.phoneHref}>94484 17318 <ArrowUpRight size={28} aria-hidden="true" /></a><span className="contact-caption">Call Daivik Borewells</span><a href={brand.whatsapp} className="text-link"><MessageCircle size={18} aria-hidden="true" /> Prefer WhatsApp? Start here</a><a href={brand.emailHref} className="text-link"><Mail size={18} aria-hidden="true" /> {brand.email}</a></Reveal>
             <Reveal direction="right" delay={0.08}><SiteVisitForm /></Reveal>
           </div>
         </section>
@@ -185,9 +161,9 @@ export default function Home() {
       <footer className="site-footer">
         <div className="wrap">
           <div className="footer-main">
-            <div><a className="wordmark footer-brand" href="#top" aria-label="Daivik Borewells home"><Logo /></a><p>Water, where you need it.<br />Borewell solutions. Bangalore.</p></div>
+            <div><a className="wordmark footer-brand" href="#top" aria-label="Daivik Borewells home"><Logo /></a><p>Water, where you need it.{" "}<br />Borewell solutions. Bangalore.</p></div>
             <div><h3>Explore</h3><a href="#equipment">Our machines</a><a href="/borewell-services">Our services</a><a href="/service-areas">Service areas</a><a href="#process">How we work</a><a href="#faq">FAQs</a></div>
-            <div><h3>Say hello</h3><a href={brand.phoneHref}>+91 94484 17318</a><a href={brand.emailHref}>{brand.email}</a><a href={brand.whatsapp}>WhatsApp <ArrowUpRight size={13} aria-hidden="true" /></a><a href="#site-visit">Book a site visit</a><span>Bangalore, Karnataka</span></div>
+            <div><h3>Say hello</h3><a href={brand.phoneHref}>+91 94484 17318</a><a href={brand.emailHref}>{brand.email}</a><a href={brand.whatsapp}>WhatsApp <ArrowUpRight size={13} aria-hidden="true" /></a><a href="#site-visit">Book a site visit</a><span>Serving Bengaluru, Karnataka</span></div>
             <a href="#top" className="back-top" aria-label="Back to top" title="Back to top"><ArrowDown size={22} aria-hidden="true" /></a>
           </div>
           <div className="footer-bottom"><span>© {new Date().getFullYear()} Daivik Borewells</span><a href="/sitemap.xml">Sitemap</a></div>

@@ -141,6 +141,9 @@ h2 em { font-weight: 400; }
 .hero-copy > .eyebrow { margin-bottom: 22px; }
 .hero h1 { font-family: var(--font-display); font-weight: 400; font-size: 96px; line-height: .91; }
 .hero h1 span { color: var(--color-accent); }
+.hero h1 .hero-title-service { display: block; margin-top: 18px; font-family: var(--font-body); font-size: 13px; font-weight: 600; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink); }
+.area-list a { color: inherit; text-decoration: underline; text-decoration-color: #b9b6c4; text-underline-offset: 3px; }
+.area-list a:hover { text-decoration-color: currentColor; }
 .hero-tagline { font-family: var(--font-display); font-size: 36px; font-style: italic; margin-top: 21px; }
 .hero-description { font-size: 15px; line-height: 1.7; margin-top: 16px; font-weight: 500; }
 .hero-actions { display: flex; gap: 10px; margin-top: 24px; }
@@ -568,6 +571,15 @@ h2 em { font-weight: 400; }
 .location-page .location-service-list p { font-size: 14px; color: var(--color-ink-soft); }
 .location-page .location-preparation ul { list-style: none; padding: 0; margin: 0; }
 .location-page .location-preparation li { display: flex; gap: 18px; padding-block: 23px; border-top: 1px solid var(--color-border); }
+.location-page .location-coverage { background: var(--color-lilac); }
+.location-page .location-coverage h3 { font-family: var(--font-display); font-size: 26px; font-weight: 400; line-height: 1.2; margin-bottom: 12px; }
+.location-page .location-coverage ul + h3 { margin-top: 36px; }
+.location-page .location-coverage-list, .location-page .location-service-links { list-style: none; padding: 0; margin: 0; }
+.location-page .location-coverage-list { margin-top: 26px; }
+.location-page .location-coverage-list li { display: flex; align-items: center; gap: 12px; padding-block: 14px; border-top: 1px solid var(--color-border); }
+.location-page .location-service-links li { border-top: 1px solid var(--color-border); }
+.location-page .location-service-links a { display: block; padding-block: 12px; font-size: 15px; text-decoration: underline; text-decoration-color: var(--color-border); text-underline-offset: 3px; }
+.location-page .location-service-links a:hover { text-decoration-color: currentColor; }
 .location-page .location-faq { border-top: 1px solid var(--color-border); }
 .location-page .location-gallery-link { background: var(--color-lilac); padding-block: 58px; }
 .location-page .location-gallery-link > div { display: flex; gap: 40px; justify-content: space-between; align-items: end; }

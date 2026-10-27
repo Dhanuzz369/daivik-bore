@@ -18,7 +18,7 @@ registerHooks({
     return next(specifier, context);
   },
   load(url, context, next) {
-    if (url === 'location-test:catalogue') return { format: 'module', shortCircuit: true, source: 'export const getPublishedLocations = () => globalThis.__locationTestPublished(); export const getPublishedLocation = slug => getPublishedLocations().find(record => record.slug === slug);' };
+    if (url === 'location-test:catalogue') return { format: 'module', shortCircuit: true, source: `export { locationSummary } from '${new URL('../data/locations.ts', import.meta.url).href}'; export const getPublishedLocations = () => globalThis.__locationTestPublished(); export const getPublishedLocation = slug => getPublishedLocations().find(record => record.slug === slug); export const getNearbyLocations = slug => getPublishedLocations().filter(record => record.slug !== slug).slice(0, 3);` };
     if (url === 'location-test:navigation') return { format: 'module', shortCircuit: true, source: 'export function notFound() { throw new Error("NEXT_HTTP_ERROR_FALLBACK;404"); }' };
     return next(url, context);
   },
@@ -62,7 +62,7 @@ test('publication gate agrees across params, route, metadata, hub and sitemap', 
     for (const href of ['/', '/service-areas', '/borewell-services', '/#site-visit', '/#projects', 'tel:+919448417318']) assert.ok(html.includes(`href="${href}"`), href);
     const schema = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
     const graph = schema['@graph'];
-    assert.deepEqual(graph.map(item => item['@type']).sort(), ['Organization', 'WebSite', 'WebPage', 'Service', 'BreadcrumbList'].sort());
+    assert.deepEqual(graph.map(item => [].concat(item['@type']).join('+')).sort(), ['LocalBusiness+HomeAndConstructionBusiness', 'WebSite', 'WebPage', 'Service', 'BreadcrumbList'].sort());
     assert.equal(graph.find(item => item['@type'] === 'WebPage').url, url);
     const service = graph.find(item => item['@type'] === 'Service');
     assert.equal(service.provider['@id'], `${brand.url}/#business`);

@@ -11,7 +11,14 @@ export const brand = {
   whatsapp: `https://wa.me/919448417318?text=${encodeURIComponent(whatsappMessage)}`,
   url: "https://www.daivikborewells.com",
   maps: "https://www.google.com/maps/search/?api=1&query=Thalaghattapura+Bangalore",
+  locality: "Bengaluru",
+  region: "Karnataka",
+  // Owner-supplied public profiles only (Google Business Profile first). Empty until supplied.
+  sameAs: [] as string[],
 };
+
+// Bump when page content changes; feeds sitemap lastmod and WebPage dateModified.
+export const contentUpdatedAt = "2026-10-27";
 
 export const images = {
   heroRig: "/images/hero-user.webp",
@@ -98,7 +105,8 @@ export const serviceDirectory = [
 
 export const faqs = [
   { question: "Can you reach a narrow road or an existing home?", answer: "Compact and track-mounted robo drilling machines may suit restricted sites. We check entrance width, turning space, overhead clearance and working room before confirming the right machine." },
-  { question: "How much does a borewell cost?", answer: "The price depends on access, drilling depth, ground conditions, casing and pump requirements. Share your location and site details for an assessment and a scope-based quote." },
+  { question: "How much does a borewell cost?", answer: "The price depends on drilling depth, ground and rock conditions, machine access and mobilization, the length and type of casing, and the pump, cabling and fittings you need. Share your location and site details for a free visit and an itemised, scope-based quote." },
+  { question: "Do I need permission to drill a borewell in Bengaluru?", answer: "Often, yes. The Karnataka Ground Water Authority regulates new borewells, and Bengaluru's taluks are notified areas where its permission is generally required. Within BWSSB limits, BWSSB has also required permission for new borewells. Rules change, so check the current requirements for your property before drilling." },
   { question: "Can you guarantee that we will find water?", answer: "No. A groundwater assessment helps guide the drilling location, but water availability and yield depend on local geology. No survey or drilling method can guarantee water." },
   { question: "Do you handle casing and pump installation too?", answer: "Yes. We can coordinate assessment, machine selection, drilling, casing, pump installation and testing. Pump selection follows the drilling results and your usage requirements." },
   { question: "Can an existing borewell be deepened?", answer: "We first assess the existing borewell, its condition and site access. Deepening is considered only where suitable; the recommendation and scope depend on that assessment." },

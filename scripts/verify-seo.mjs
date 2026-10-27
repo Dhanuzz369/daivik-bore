@@ -9,7 +9,7 @@ async (page) => {
     const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
     const graphs = schemas.map(JSON.parse);
     check(!JSON.stringify(graphs).includes("ProfessionalService"), "Deprecated schema: " + path);
-    check(JSON.stringify(graphs).includes('"Organization"'), "Business identity missing: " + path);
+    check(JSON.stringify(graphs).includes('"LocalBusiness"'), "Business identity missing: " + path);
     if (path !== "/") {
       check(await page.locator('meta[property="og:url"]').getAttribute("content") === "https://www.daivikborewells.com" + path, "Social URL: " + path);
       check(await page.locator('meta[property="og:image"]').count() > 0 && await page.locator('meta[name="twitter:image"]').count() > 0, "Social image: " + path);
@@ -34,7 +34,9 @@ async (page) => {
     }
   }
   const sitemap = await (await page.request.get(base + "/sitemap.xml")).text();
-  check(!sitemap.includes("<lastmod>") && !sitemap.includes("<priority>"), "Sitemap dates/priority");
+  const lastmods = sitemap.match(/<lastmod>([^<]+)<\/lastmod>/g) || [];
+  check(lastmods.length === (sitemap.match(/<loc>/g) || []).length && lastmods.every(tag => /\d{4}-\d{2}-\d{2}/.test(tag)), "Sitemap lastmod");
+  check(!sitemap.includes("<priority>"), "Sitemap priority");
   check(sitemap.includes("https://www.daivikborewells.com/"), "Sitemap host");
   await page.goto(base + "/service-areas");
   const publishedCount = await page.locator('a[href^="/service-areas/"]').count();

@@ -72,7 +72,7 @@ export function SiteVisitForm() {
     <button type="submit" disabled={!ready} className="button button-primary form-submit">Get free site visit <ArrowUpRight size={18} aria-hidden="true" /></button>
     <noscript><p className="form-note">Arrange your free site visit by <a href={brand.phoneHref}>calling us</a> or <a href={brand.whatsapp}>contacting us on WhatsApp</a>.</p></noscript>
     <p className="form-note">Continue in WhatsApp to send your request. We&apos;ll confirm the visit with you.</p>
-    {messageUrl && <div className="form-success" role="status"><CheckCircle2 size={19} aria-hidden="true" /><div>Your message is ready, not yet sent.<br /><a href={messageUrl} target="_blank" rel="noopener noreferrer">Open WhatsApp to send it <ArrowUpRight size={14} aria-hidden="true" /></a></div></div>}
+    {messageUrl && <div className="form-success" role="status"><CheckCircle2 size={19} aria-hidden="true" /><div>Your message is ready, not yet sent.{" "}<br /><a href={messageUrl} target="_blank" rel="noopener noreferrer">Open WhatsApp to send it <ArrowUpRight size={14} aria-hidden="true" /></a></div></div>}
     <details className="privacy-note"><summary>How your details are used</summary><p>This form does not store your details on the website. They are included in a WhatsApp message for you to review and send to Daivik Borewells about this enquiry. WhatsApp&apos;s own privacy terms apply.</p></details>
   </form>;
 }

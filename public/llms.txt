@@ -1,6 +1,6 @@
 # Daivik Borewells
 
-Daivik Borewells is a borewell drilling contractor serving Bangalore, Karnataka, India.
+> Borewell drilling contractor in Bengaluru (Bangalore), Karnataka, India. Large-rig, compact and robo drilling, groundwater site assessment, casing, deepening and submersible pump installation for homes, apartments, farms and commercial sites. Free site visits. Phone and WhatsApp +91 94484 17318.
 
 ## Services
 
@@ -19,16 +19,35 @@ Homes and villas, apartments and residential layouts, farms and agricultural lan
 
 All Bengaluru, including Kanakapura Road, Kengeri and Hosur Road, plus Nelamangala, the Airport Road / Devanahalli corridor and Doddaballapura. Site visits are free; scheduling and machine suitability depend on the actual site.
 
-## Contact
+## Pages
 
-- [Daivik Borewells website](https://www.daivikborewells.com/)
-- [Borewell drilling equipment](https://www.daivikborewells.com/#equipment)
-- [Borewell services](https://www.daivikborewells.com/#services)
-- [Complete borewell service directory](https://www.daivikborewells.com/borewell-services)
-- [Service areas in Bangalore](https://www.daivikborewells.com/#areas)
+- [Home](https://www.daivikborewells.com/)
+- [Borewell services, cost factors and permits](https://www.daivikborewells.com/borewell-services)
 - [Bengaluru service area directory](https://www.daivikborewells.com/service-areas)
 - [Frequently asked questions](https://www.daivikborewells.com/#faq)
 - [Book a site visit](https://www.daivikborewells.com/#site-visit)
+
+## Area guides
+
+- [Devanahalli / Airport Road](https://www.daivikborewells.com/service-areas/devanahalli-airport-road)
+- [Nelamangala](https://www.daivikborewells.com/service-areas/nelamangala)
+- [Doddaballapura](https://www.daivikborewells.com/service-areas/doddaballapura)
+- [Kanakapura Road](https://www.daivikborewells.com/service-areas/kanakapura-road)
+- [Kengeri and RR Nagar](https://www.daivikborewells.com/service-areas/kengeri)
+- [Hosur Road, Electronic City, Bommasandra and Attibele](https://www.daivikborewells.com/service-areas/hosur-road)
+- [Bhartiya City / Thanisandra](https://www.daivikborewells.com/service-areas/bhartiya-city-thanisandra)
+- [Whitefield](https://www.daivikborewells.com/service-areas/whitefield)
+- [Peenya](https://www.daivikborewells.com/service-areas/peenya)
+- [Jigani](https://www.daivikborewells.com/service-areas/jigani)
+- [Dabaspet / Sompura](https://www.daivikborewells.com/service-areas/dabaspet-sompura)
+- [Hoskote](https://www.daivikborewells.com/service-areas/hoskote)
+- [Bidadi](https://www.daivikborewells.com/service-areas/bidadi)
+- [Harohalli](https://www.daivikborewells.com/service-areas/harohalli)
+- [Bengaluru Aerospace Park / Hardware Park](https://www.daivikborewells.com/service-areas/aerospace-hardware-parks)
+- [South Bengaluru](https://www.daivikborewells.com/service-areas/south-bengaluru)
+
+## Contact
+
 - Phone and WhatsApp: +91 94484 17318
 - Email: daivikborewells@gmail.com
 
