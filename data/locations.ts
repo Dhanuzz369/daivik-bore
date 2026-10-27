@@ -67,6 +67,23 @@ export function getNearbyLocations(slug: string): readonly LocationRecord[] {
   return getPublishedLocations().filter(record => slugs.has(record.slug));
 }
 
+// Keyword-led title; falls back to the shorter form when the area name is long.
+export function locationTitle(record: Pick<LocationRecord, "name">): string {
+  const candidates = [
+    `Borewell Drilling Contractors in ${record.name} | Daivik Borewells`,
+    `Borewell Drilling in ${record.name} | Daivik Borewells`,
+  ];
+  return candidates.find(title => title.length <= 70) ?? `Borewell Drilling in ${record.name}`;
+}
+
+export function locationKeywords(record: Pick<LocationRecord, "name" | "coverageLabels">): string[] {
+  const places = [...new Set([record.name, ...record.coverageLabels])];
+  return [
+    ...places.flatMap(place => [`borewell drilling in ${place}`, `borewell contractors in ${place}`]),
+    `borewell drilling ${record.name}`, `bore well drilling ${record.name}`, `robo borewell drilling ${record.name}`, `submersible pump installation ${record.name}`,
+  ];
+}
+
 // First sentences of the introduction, up to a meta-description length.
 export function locationSummary(record: LocationRecord, max = 160): string {
   const sentences = record.introduction.match(/[^.!?]+[.!?]+/g) ?? [record.introduction];

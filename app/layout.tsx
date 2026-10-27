@@ -7,11 +7,17 @@ const siteUrl = brand.url;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Borewell Drilling Bangalore | Daivik Borewells",
+    default: "Borewell Drilling Contractors in Bangalore | Daivik Borewells",
     template: "%s | Daivik Borewells",
   },
   description:
-    "Borewell drilling in Bangalore for homes, apartments, farms and commercial sites. Compact, robo and large-rig drilling, casing, deepening and pump installation.",
+    "Borewell drilling contractors in Bangalore for homes, apartments, farms and commercial sites. Large-rig, compact and robo drilling, casing and pump installation. Free site visit.",
+  keywords: [
+    "borewell drilling Bangalore", "borewell drilling Bengaluru", "borewell contractors in Bangalore", "borewell drilling company in Bangalore",
+    "bore well drilling Bangalore", "borewell drilling services", "robo borewell drilling Bangalore", "compact borewell drilling",
+    "borewell deepening Bangalore", "borewell casing installation", "submersible pump installation Bangalore", "borewell cost Bangalore",
+    "borewell for apartments", "agricultural borewell drilling", "Daivik Borewells",
+  ],
   applicationName: "Daivik Borewells",
   category: "Borewell drilling services",
   creator: "Daivik Borewells",
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
     languages: { "en-IN": "/" },
   },
   openGraph: {
-    title: "Borewell Drilling in Bangalore | Daivik Borewells",
+    title: "Borewell Drilling Contractors in Bangalore | Daivik Borewells",
     description:
       "Complete borewell drilling, casing, deepening and pump installation for Bangalore properties, including narrow-road and restricted-access sites.",
     url: siteUrl,
@@ -32,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Borewell Drilling in Bangalore | Daivik Borewells",
+    title: "Borewell Drilling Contractors in Bangalore | Daivik Borewells",
     description: "Complete borewell solutions for homes, apartments, farms and commercial properties across Bangalore.",
     images: ["/images/hero-user.webp"],
   },

@@ -18,7 +18,7 @@ registerHooks({
     return next(specifier, context);
   },
   load(url, context, next) {
-    if (url === 'location-test:catalogue') return { format: 'module', shortCircuit: true, source: `export { locationSummary } from '${new URL('../data/locations.ts', import.meta.url).href}'; export const getPublishedLocations = () => globalThis.__locationTestPublished(); export const getPublishedLocation = slug => getPublishedLocations().find(record => record.slug === slug); export const getNearbyLocations = slug => getPublishedLocations().filter(record => record.slug !== slug).slice(0, 3);` };
+    if (url === 'location-test:catalogue') return { format: 'module', shortCircuit: true, source: `export { locationKeywords, locationSummary, locationTitle } from '${new URL('../data/locations.ts', import.meta.url).href}'; export const getPublishedLocations = () => globalThis.__locationTestPublished(); export const getPublishedLocation = slug => getPublishedLocations().find(record => record.slug === slug); export const getNearbyLocations = slug => getPublishedLocations().filter(record => record.slug !== slug).slice(0, 3);` };
     if (url === 'location-test:navigation') return { format: 'module', shortCircuit: true, source: 'export function notFound() { throw new Error("NEXT_HTTP_ERROR_FALLBACK;404"); }' };
     return next(url, context);
   },
@@ -52,7 +52,9 @@ test('publication gate agrees across params, route, metadata, hub and sitemap', 
     const metadata = await route.generateMetadata(props(fixture.slug));
     assert.equal(metadata.alternates.canonical, url);
     assert.equal(metadata.openGraph.url, url);
-    assert.equal(metadata.title.absolute, `Borewell Drilling in ${fixture.name} | Daivik Borewells`);
+    assert.equal(metadata.title.absolute, catalogue.locationTitle(fixture));
+    assert.ok(metadata.title.absolute.startsWith(`Borewell Drilling`) && metadata.title.absolute.includes(fixture.name));
+    assert.ok(metadata.keywords.includes(`borewell drilling in ${fixture.name}`));
     assert.equal(metadata.alternates.languages['en-IN'], url);
     assert.ok(metadata.description.includes(fixture.name));
     assert.equal(metadata.openGraph.images[0].url, `${brand.url}/images/hero-user.webp`);

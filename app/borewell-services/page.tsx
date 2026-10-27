@@ -6,8 +6,9 @@ import { brand, serviceDirectory } from "@/data/site";
 import { directorySchema, jsonLd, serviceDirectorySchema, serviceId, serviceSlug } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Borewell Services in Bangalore: Drilling, Cost Factors & Permits",
+  title: "Borewell Services in Bangalore: Cost & Permits",
   description: "Borewell drilling, compact and robo drilling, casing, deepening and pump installation across Bangalore, plus what affects borewell cost and the permits to check first.",
+  keywords: ["borewell services Bangalore", "borewell drilling services Bengaluru", "robo borewell drilling", "compact borewell drilling", "borewell deepening", "borewell casing installation", "submersible pump installation", "groundwater site assessment", "borewell cost Bangalore", "borewell permission Bengaluru", "KGWA borewell permit"],
   alternates: { canonical: "/borewell-services" },
   openGraph: { title: "Borewell Services | Daivik Borewells", description: "Drilling, site assessment, casing, deepening and pump installation across Bengaluru. Arrange a free site visit.", url: `${brand.url}/borewell-services`, siteName: brand.name, locale: "en_IN", type: "website", images: [{ url: "/images/hero-user.webp", width: 1448, height: 1086, alt: "Borewell drilling rig" }] },
   twitter: { card: "summary_large_image", title: "Borewell Services | Daivik Borewells", description: "Explore borewell services and planning considerations in Bengaluru.", images: ["/images/hero-user.webp"] },
@@ -25,7 +26,7 @@ export default function BorewellServicesPage() {
     <Header />
     <a className="skip-link" href="#main">Skip to content</a>
     <main id="main" className="directory-page">
-      <header className="directory-hero wrap"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Borewell services</span></nav><p className="eyebrow">COMPLETE WATER SOLUTIONS</p><h1>Borewell services{" "}<br />in Bangalore.</h1><p>Daivik Borewells provides drilling, site assessment, casing, deepening and submersible pump installation across Bengaluru. A free site visit helps define the access requirements and proposed scope.</p></header>
+      <header className="directory-hero wrap"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Borewell services</span></nav><p className="eyebrow">COMPLETE WATER SOLUTIONS</p><h1>Borewell services{" "}<br />in Bangalore.</h1><p>Daivik Borewells provides borewell drilling services across Bengaluru: large-rig, compact and robo borewell drilling, groundwater site assessment, casing, borewell deepening and submersible pump installation. A free site visit helps define the access requirements and proposed scope.</p></header>
       <section className="wrap directory-grid" aria-label="Borewell services">
         {serviceDirectory.map((service, index) => <article key={service.name} id={serviceSlug(service.name)}><span>0{index + 1}</span><h2>{service.name}</h2><p>{service.description}</p><a href="/#site-visit">Discuss this service <ArrowUpRight size={16} aria-hidden="true" /></a></article>)}
       </section>

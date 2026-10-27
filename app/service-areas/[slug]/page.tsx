@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LocationPage } from "@/components/LocationPage";
-import { getPublishedLocation, getPublishedLocations, locationSummary } from "@/data/locations";
+import { getPublishedLocation, getPublishedLocations, locationKeywords, locationSummary, locationTitle } from "@/data/locations";
 import { brand } from "@/data/site";
 import { jsonLd, locationSchema } from "@/lib/seo";
 
@@ -20,12 +20,12 @@ async function publishedLocation({ params }: Props) {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const location = await publishedLocation(props);
   const url = `${brand.url}/service-areas/${location.slug}`;
-  const title = `Borewell Drilling in ${location.name} | Daivik Borewells`;
+  const title = locationTitle(location);
   const lead = `Borewell drilling in ${location.name}. `;
   const summary = locationSummary(location);
   const description = summary.includes(location.name) ? summary : lead + locationSummary(location, 160 - lead.length);
   const image = `${brand.url}/images/hero-user.webp`;
-  return { title: { absolute: title }, description, alternates: { canonical: url, languages: { "en-IN": url } },
+  return { title: { absolute: title }, description, keywords: locationKeywords(location), alternates: { canonical: url, languages: { "en-IN": url } },
     openGraph: { title, description, url, siteName: brand.name, locale: "en_IN", type: "website", images: [{ url: image, width: 1448, height: 1086, alt: "Borewell drilling rig" }] },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };

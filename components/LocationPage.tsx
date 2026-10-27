@@ -29,12 +29,12 @@ export function LocationPage({ location }: { location: LocationRecord }) {
       </section>
       <div className="location-assurance"><div className="wrap"><span>Access-led machine selection</span><span>Drilling, casing &amp; pump installation</span><a href={brand.emailHref}><Mail size={16} aria-hidden="true" />Email our team</a></div></div>
       <section className="section location-guidance"><div className="wrap location-columns">
-        <div><p className="eyebrow">YOUR LOCATION. YOUR REQUIREMENTS.</p><h2>Borewells in{" "}<em>{location.name}.</em></h2><p>{location.introduction}</p></div>
+        <div><p className="eyebrow">YOUR LOCATION. YOUR REQUIREMENTS.</p><h2>Borewell contractors{" "}<em>in {location.name}.</em></h2><p>{location.introduction}</p></div>
         <div className="location-local-sections">{location.sections.map(section => <article key={section.heading}><h3>{section.heading}</h3><p>{section.body}</p></article>)}</div>
       </div></section>
       <section className="section location-coverage"><div className="wrap location-columns">
         <div><p className="eyebrow">WHERE WE WORK</p><h2>Localities covered{" "}<em>in {location.name}.</em></h2><ul className="location-coverage-list">{location.coverageLabels.map(label => <li key={label}><Check size={18} aria-hidden="true" />{label}</li>)}</ul></div>
-        <div><h3>Services available in {location.name}</h3><ul className="location-service-links">{serviceNames.map(name => <li key={name}><a href={`/borewell-services#${serviceSlug(name)}`}>{name}</a></li>)}</ul>
+        <div><h3>Borewell services in {location.name}</h3><ul className="location-service-links">{serviceNames.map(name => <li key={name}><a href={`/borewell-services#${serviceSlug(name)}`}>{name} in {location.name}</a></li>)}</ul>
           {nearby.length > 0 && <><h3>Nearby service areas</h3><ul className="location-service-links">{nearby.map(record => <li key={record.slug}><a href={`/service-areas/${record.slug}`}>Borewell drilling in {record.name}</a></li>)}</ul></>}
         </div>
       </div></section>

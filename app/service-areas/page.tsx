@@ -7,8 +7,9 @@ import { directorySchema, jsonLd } from "@/lib/seo";
 import { getPublishedLocations } from "@/data/locations";
 
 export const metadata: Metadata = {
-  title: "Borewell Service Areas in Bengaluru",
-  description: "Borewell drilling across all Bengaluru, Nelamangala, Devanahalli / Airport Road and Doddaballapura, including Kanakapura Road, Kengeri and Hosur Road. Free site visits.",
+  title: "Borewell Drilling Service Areas in Bangalore",
+  description: "Find borewell drilling contractors near you: all Bengaluru, Nelamangala, Devanahalli / Airport Road and Doddaballapura, including Kanakapura Road, Kengeri and Hosur Road. Free site visits.",
+  keywords: ["borewell drilling near me Bangalore", "borewell contractors Bengaluru areas", "borewell drilling Nelamangala", "borewell drilling Devanahalli", "borewell drilling Doddaballapura", "borewell drilling Kanakapura Road", "borewell drilling Kengeri", "borewell drilling Hosur Road", "industrial borewell drilling Bengaluru"],
   alternates: { canonical: "/service-areas" },
   openGraph: { title: "Bengaluru Borewell Service Areas | Daivik Borewells", description: "All Bengaluru and the Nelamangala, Devanahalli and Doddaballapura corridors. Free site visits.", url: `${brand.url}/service-areas`, siteName: brand.name, locale: "en_IN", type: "website", images: [{ url: "/images/hero-user.webp", width: 1448, height: 1086, alt: "Borewell drilling rig" }] },
   twitter: { card: "summary_large_image", title: "Bengaluru Borewell Service Areas | Daivik Borewells", description: "Explore Bengaluru-wide coverage and arrange a free site visit.", images: ["/images/hero-user.webp"] },
@@ -29,7 +30,7 @@ export default function ServiceAreasPage() {
     <Header />
     <a className="skip-link" href="#main">Skip to content</a>
     <main id="main" className="directory-page">
-      <header className="directory-hero wrap"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Service areas</span></nav><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> BENGALURU SERVICE AREA</p><h1>Borewell services{" "}<br />across Bengaluru.</h1><p>Daivik Borewells serves all Bengaluru and the Nelamangala, Airport Road / Devanahalli and Doddaballapura corridors. Kanakapura Road, Kengeri and Hosur Road are included. Site visits are free; share your location to arrange access and scheduling.</p></header>
+      <header className="directory-hero wrap"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Service areas</span></nav><p className="eyebrow"><MapPin size={14} aria-hidden="true" /> BENGALURU SERVICE AREA</p><h1>Borewell drilling{" "}<br />across Bengaluru.</h1><p>Looking for borewell contractors near you? Daivik Borewells serves all Bengaluru and the Nelamangala, Airport Road / Devanahalli and Doddaballapura corridors. Kanakapura Road, Kengeri and Hosur Road are included. Site visits are free; share your location to arrange access and scheduling.</p></header>
       {published.length > 0 && <section className="wrap planning-section"><h2>Borewell drilling guides by area</h2><ul>{published.map(location => <li key={location.slug}><a className="text-link" href={`/service-areas/${location.slug}`}>Borewell drilling in {location.name} <ArrowUpRight size={17} aria-hidden="true" /></a></li>)}</ul></section>}
       <section className="wrap area-directory" aria-label="Borewell service areas">
         {bengaluruAreas.map((area) => <div key={area}><Check size={16} aria-hidden="true" /><span>{area}</span></div>)}
